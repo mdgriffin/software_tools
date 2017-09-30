@@ -177,9 +177,9 @@ namespace CurrencyConverter.Models
         */
 
         // Abstract method to force subclasses to implement a method to validate a single property
-        //public abstract void validateProp(String propName);
+        public abstract void validateProp(String propName);
 
         // Abstract method to force subclasses to implement a method that check all properties for errors
-        //public abstract void validateAllProps();
+        public abstract void validateAllProps();
     }
 }
