@@ -2,8 +2,153 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:CurrencyConverter"
+             xmlns:viewModels="clr-namespace:CurrencyConverter.ViewModels"
+             xmlns:views="clr-namespace:CurrencyConverter.Views"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <!-- App Styling -->
+        <Style x:Key="MainHeading" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Foreground" Value="#1089F2" />
+        </Style>
+
+        <Style x:Key="SecondaryHeading" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="Foreground" Value="#263238" />
+        </Style>
+
+        <Style x:Key="btnPrimary" TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#03A9F4" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Padding" Value="7" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+
+        <Style x:Key="btnSecondary" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Padding" Value="7" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#eaeaea" />
+        </Style>
+
+        <!--<Style x:key="btnTest"  TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Green"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>-->
+
+        <Style TargetType="DataGrid">
+            <Setter Property="Width" Value="Auto" />
+            <Setter Property="RowHeaderWidth" Value="0" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="HorizontalGridLinesBrush" Value="Transparent"/>
+            <Setter Property="VerticalGridLinesBrush" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Background" Value="#EAEEF0" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="5 10" />
+        </Style>
+
+        <Style  TargetType="DataGridRow">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="#eaeaea" />
+            <Setter Property="BorderThickness" Value="0 0 0 1" />
+        </Style>
+
+        <Style TargetType="DataGridCell">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Padding" Value="10" />
+        </Style>
+
+        <!--
+        Text input style that places a placeholder text within input
+        Source: http://stackoverflow.com/questions/11873378/adding-placeholder-text-to-textbox
+        Author: MacGile
+        -->
+
+        <Style x:Key="inputFilter" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                 x:Name="textSource" 
+                                 Padding="5" 
+                                 Background="Transparent" 
+                                 Panel.ZIndex="2" />
+                            <TextBox Text="{TemplateBinding Tag}" Padding="5"  Background="{TemplateBinding Background}" Panel.ZIndex="1">
+                                <TextBox.Style>
+                                    <Style TargetType="{x:Type TextBox}">
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                                <Setter Property="Foreground" Value="Gray"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <s:Char x:Key="PerChar">P</s:Char>
+        <s:Char x:Key="BusChar">B</s:Char>
+
+        <s:Boolean x:Key="TrueBool">true</s:Boolean>
+        <s:Boolean x:Key="FalseBool">false</s:Boolean>
+
+        <x:Array x:Key="Titles" Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+            <sys:String>Mr</sys:String>
+            <sys:String>Mrs</sys:String>
+            <sys:String>Ms</sys:String>
+            <sys:String>Miss</sys:String>
+        </x:Array>
+
+        <ControlTemplate x:Key="inputError">
+            <StackPanel>
+                <AdornedElementPlaceholder x:Name="textBox"/>
+                <TextBlock Text="{Binding ErrorContent}" Foreground="Red"/>
+            </StackPanel>
+        </ControlTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+            <views:Home />
+        </DataTemplate>
+
+        
+        <!--
+        <local:RadioAccountTypeConverter x:Key="RadioButtonCheckedConverter" />
+        <local:RadioIsServiceCheckedConverter x:Key="RadioIsServiceCheckedConverter" />
+        -->
+
     </Application.Resources>
 </Application>
