@@ -133,6 +133,13 @@
             <sys:String>Miss</sys:String>
         </x:Array>
 
+        <x:Array x:Key="Currencies" Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+            <sys:String>Euro</sys:String>
+            <sys:String>Dollar</sys:String>
+            <sys:String>Pound</sys:String>
+            <sys:String>Yen</sys:String>
+        </x:Array>
+
         <ControlTemplate x:Key="inputError">
             <StackPanel>
                 <AdornedElementPlaceholder x:Name="textBox"/>
@@ -144,7 +151,11 @@
             <views:Home />
         </DataTemplate>
 
-        
+        <DataTemplate DataType="{x:Type viewModels:ConversionFormViewModel}">
+            <views:ConversionForm />
+        </DataTemplate>
+
+
         <!--
         <local:RadioAccountTypeConverter x:Key="RadioButtonCheckedConverter" />
         <local:RadioIsServiceCheckedConverter x:Key="RadioIsServiceCheckedConverter" />

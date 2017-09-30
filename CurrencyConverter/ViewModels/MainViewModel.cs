@@ -9,7 +9,7 @@ namespace CurrencyConverter.ViewModels
         {
             this.parent = this;
             // The first view model is the home view model
-            navigateTo(new HomeViewModel(this));
+            navigateTo(new ConversionFormViewModel(this));
         }
 
         public ICommand doSomething
