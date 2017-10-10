@@ -12,7 +12,7 @@ namespace CurrencyConverterTest
         {
             CurrencyConverterTest cc = new CurrencyConverter();
 
-            List<CurrencyModel> rates = cc.GetExchangeRates();
+            List<String, double> rates = cc.GetExchangeRates();
 
 
             Assert.AreEqual(10, rates.length);
