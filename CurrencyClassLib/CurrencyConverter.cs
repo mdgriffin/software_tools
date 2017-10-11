@@ -11,7 +11,6 @@ namespace CurrencyClassLib
 
         public CurrencyConverter()
         {
-
         }
 
 
@@ -30,6 +29,12 @@ namespace CurrencyClassLib
             return 0.5;
         }
 
+        public double Convert (double value, String fromCurrency, String toCurrency)
+        {
+            double rate = GetExchangeRate(fromCurrency, toCurrency);
+
+            return value * rate;
+        }
 
     }
 }

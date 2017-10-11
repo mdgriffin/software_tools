@@ -16,17 +16,28 @@ namespace CurrencyConverterTest
             Dictionary<String, double> rates = cc.GetExchangeRatesList("EUR");
 
             Assert.AreEqual(rates.Count, 2);
-
         }
-
 
         [TestMethod]
         public void GetExchangeRateTest()
         {
             CurrencyConverter cc = new CurrencyConverter();
-            Double exchangeRate = cc.GetExchangeRate("EUR", "USD");
+            Double actualRate = cc.GetExchangeRate("EUR", "USD");
+            double expectedRate = 0.5;
 
-            Assert.AreEqual(exchangeRate, 0.5);
+            Assert.AreEqual(expectedRate, actualRate);
+        }
+
+        [TestMethod]
+        public void ConvertTest ()
+        {
+            CurrencyConverter cc = new CurrencyConverter();
+
+            double valueToConvert = 125;
+            double expectedValue = valueToConvert * 0.5;
+            double actualValue = cc.Convert(valueToConvert, "USD", "EUR");
+
+            Assert.AreEqual(expectedValue, actualValue);
         }
     }
 }
