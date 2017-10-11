@@ -15,7 +15,7 @@ namespace CurrencyClassLib
         }
 
 
-        public Dictionary<String, double> GetExchangeRates()
+        public Dictionary<String, double> GetExchangeRates(String baseCurrency)
         {
             Dictionary<String, double> rates = new Dictionary<String, double>();
 

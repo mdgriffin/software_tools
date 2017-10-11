@@ -13,9 +13,9 @@ namespace CurrencyConverterTest
         {
             CurrencyConverter cc = new CurrencyConverter();
 
-            Dictionary<String, double> rates = cc.GetExchangeRates();
+            Dictionary<String, double> rates = cc.GetExchangeRates("EUR");
 
-            Assert.AreEqual(rates.Count, 1);
+            Assert.AreEqual(rates.Count, 2);
 
         }
     }
