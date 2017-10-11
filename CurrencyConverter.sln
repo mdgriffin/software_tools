@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverterFrontend", "CurrencyConverter\CurrencyConverterFrontend.csproj", "{7956E7E0-CB95-4695-AB2C-A26CA7B54EAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverterFrontend", "CurrencyConverterWPF\CurrencyConverterFrontend.csproj", "{7956E7E0-CB95-4695-AB2C-A26CA7B54EAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverterTest", "CurrencyConverterTest\CurrencyConverterTest.csproj", "{C3975045-599A-4890-B8B7-4893D017C456}"
 EndProject
