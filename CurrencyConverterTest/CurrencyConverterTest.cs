@@ -9,11 +9,11 @@ namespace CurrencyConverterTest
     public class CurrencyConverterTest
     {
         [TestMethod]
-        public void GetExchangeRatesTest()
+        public void GetExchangeRatesListTest()
         {
             CurrencyConverter cc = new CurrencyConverter();
 
-            Dictionary<String, double> rates = cc.GetExchangeRates("EUR");
+            Dictionary<String, double> rates = cc.GetExchangeRatesList("EUR");
 
             Assert.AreEqual(rates.Count, 2);
 
