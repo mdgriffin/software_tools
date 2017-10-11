@@ -24,7 +24,7 @@ namespace CurrencyConverterTest
         public void GetExchangeRateTest()
         {
             CurrencyConverter cc = new CurrencyConverter();
-            Double exchangeRate = cc.getExchangeRate("EUR", "USD");
+            Double exchangeRate = cc.GetExchangeRate("EUR", "USD");
 
             Assert.AreEqual(exchangeRate, 0.5);
         }
