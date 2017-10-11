@@ -6,10 +6,10 @@ using System.Collections.Generic;
 namespace CurrencyConverterTest
 {
     [TestClass]
-    public class UnitTest1
+    public class CurrencyConverterTest
     {
         [TestMethod]
-        public void CurrencyConverterTest()
+        public void GetExchangeRatesTest()
         {
             CurrencyConverter cc = new CurrencyConverter();
 
@@ -17,6 +17,16 @@ namespace CurrencyConverterTest
 
             Assert.AreEqual(rates.Count, 2);
 
+        }
+
+
+        [TestMethod]
+        public void GetExchangeRateTest()
+        {
+            CurrencyConverter cc = new CurrencyConverter();
+            Double exchangeRate = cc.getExchangeRate("EUR", "USD");
+
+            Assert.AreEqual(exchangeRate, 0.5);
         }
     }
 }
