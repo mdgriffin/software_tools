@@ -1,11 +1,11 @@
 ﻿using System;
-using CurrencyConverter.Models;
+using CurrencyConverterFrontend.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyConverter.ViewModels
+namespace CurrencyConverterFrontend.ViewModels
 {
     public class ConversionFormViewModel: BaseViewModel
     {

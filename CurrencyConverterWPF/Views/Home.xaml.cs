@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CurrencyConverter.Views
+namespace CurrencyConverterFrontend.Views
 {
     /// <summary>
     /// Interaction logic for Home.xaml

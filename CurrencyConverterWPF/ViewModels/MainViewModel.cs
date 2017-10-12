@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace CurrencyConverter.ViewModels
+namespace CurrencyConverterFrontend.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {

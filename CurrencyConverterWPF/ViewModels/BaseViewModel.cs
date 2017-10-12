@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Input;
 
-namespace CurrencyConverter.ViewModels
+namespace CurrencyConverterFrontend.ViewModels
 {
     /*
      * Base View Model from which all view models are extended

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace CurrencyConverter
+namespace CurrencyConverterFrontend
 {
     /*
      * Reference: Implementation of the ICommand Interface

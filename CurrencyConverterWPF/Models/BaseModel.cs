@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Data;
 //using Oracle.ManagedDataAccess.Client;
 
-namespace CurrencyConverter.Models
+namespace CurrencyConverterFrontend.Models
 {
     /*
      * This is the base model from which all models are extended

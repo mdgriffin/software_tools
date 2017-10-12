@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyConverter.Models
+namespace CurrencyConverterFrontend.Models
 {
     public class CurrencyModel: BaseModel, INotifyDataErrorInfo
     {
