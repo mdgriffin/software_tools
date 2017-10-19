@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="CurrencyExchanger.cs" />
     <Compile Include="CurrencyDataAccess.cs" />
+    <Compile Include="CurrencyModelcs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rates.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

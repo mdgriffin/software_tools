@@ -11,6 +11,8 @@ namespace CurrencyClassLib
 
         public String GetJSON ()
         {
+
+            String url = "http://api.fixer.io/";
             return "";
         }
 
