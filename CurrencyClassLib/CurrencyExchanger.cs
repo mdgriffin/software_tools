@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace CurrencyClassLib
 {
-    public class CurrencyConverter
+    public class CurrencyExchanger
     {
 
         private CurrencyModel currencyModel;
 
-        public CurrencyConverter()
+        public CurrencyExchanger()
         {
             String currencyJson = CurrencyDataAccess.GetJSON();
             currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);

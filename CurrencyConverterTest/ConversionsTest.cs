@@ -11,9 +11,9 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetExchangeRatesListTest()
         {
-            CurrencyConverter cc = new CurrencyConverter();
+            CurrencyExchanger cc = new CurrencyExchanger();
 
-            Rates rates = cc.GetExchangeRatesList("EUR");
+            Rates rates = cc.GetExchangeRatesList("USD");
 
             Assert.IsNotNull(rates.AUD);
         }
@@ -21,7 +21,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetExchangeRateTest()
         {
-            CurrencyConverter cc = new CurrencyConverter();
+            CurrencyExchanger cc = new CurrencyExchanger();
             Double actualRate = cc.GetExchangeRate("EUR", "USD");
             double expectedRate = 0.5;
 
@@ -31,7 +31,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void ConvertTest ()
         {
-            CurrencyConverter cc = new CurrencyConverter();
+            CurrencyExchanger cc = new CurrencyExchanger();
 
             double valueToConvert = 125;
             double expectedValue = valueToConvert * 0.5;

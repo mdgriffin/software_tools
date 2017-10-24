@@ -12,7 +12,7 @@ namespace CurrencyConverterTest
         {
             String jsonData = CurrencyDataAccess.GetJSON();
 
-            Assert.AreEqual(jsonData.Length, 0);
+            Assert.IsTrue(jsonData.Length > 0);
         }
     }
 }
