@@ -12,7 +12,7 @@ namespace CurrencyClassLib
 
         public static String GetJSON ()
         {
-            String url = "http://api.fixer.io/";
+            String url = "http://api.fixer.io/latest";
 
             var json = new WebClient().DownloadString(url);
 

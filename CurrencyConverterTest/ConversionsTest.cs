@@ -15,6 +15,8 @@ namespace CurrencyConverterTest
 
             Rates rates = cc.GetExchangeRatesList("USD");
 
+
+
             Assert.IsNotNull(rates.AUD);
         }
 
