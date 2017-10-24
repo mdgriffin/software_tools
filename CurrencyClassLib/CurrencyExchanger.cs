@@ -10,14 +10,16 @@ namespace CurrencyClassLib
     public class CurrencyExchanger
     {
 
-        private CurrencyModel currencyModel;
+        private static CurrencyModel currencyModel;
 
-        public CurrencyExchanger()
+        public CurrencyExchanger ()
         {
-            String currencyJson = CurrencyDataAccess.GetJSON();
-            currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
+            if (currencyModel == null)
+            {
+                String currencyJson = CurrencyDataAccess.GetJSON();
+                currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
+            }
         }
-
 
         public Rates GetExchangeRatesList(String baseCurrency)
         {
