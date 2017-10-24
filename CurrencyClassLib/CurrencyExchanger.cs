@@ -16,6 +16,7 @@ namespace CurrencyClassLib
         {
             if (currencyModel == null)
             {
+                // Need to specifiy base currency
                 String currencyJson = CurrencyDataAccess.GetJSON();
                 currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
             }
@@ -23,7 +24,15 @@ namespace CurrencyClassLib
 
         public Rates GetExchangeRatesList(String baseCurrency)
         {
+            /*
+            if (currencyModel.@base.Equals(baseCurrency))
+            {
+                return currencyModel.rates;
+            }
+            */
+
             return currencyModel.rates;
+
         }
 
         public double GetExchangeRate (String fromCurrencyCode, String toCurrencyCode)
