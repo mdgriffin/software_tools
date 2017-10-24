@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace CurrencyConverterTest
 {
     [TestClass]
-    public class ConversionsTest
+    public class CurrencyExchangerTest
     {
         [TestMethod]
         public void GetExchangeRatesListTest()

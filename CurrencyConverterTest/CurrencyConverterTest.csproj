@@ -49,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ConversionsTest.cs" />
+    <Compile Include="CurrencyExchangerTest.cs" />
     <Compile Include="CurrencyDataAccessTest.cs" />
   </ItemGroup>
   <ItemGroup>
