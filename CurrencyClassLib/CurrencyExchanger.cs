@@ -26,7 +26,7 @@ namespace CurrencyClassLib
             return currencyModel.rates;
         }
 
-        public double GetExchangeRate (String fromCurrency, String toCurrency)
+        public double GetExchangeRate (String fromCurrencyCode, String toCurrencyCode)
         {
             return 0.5;
         }
