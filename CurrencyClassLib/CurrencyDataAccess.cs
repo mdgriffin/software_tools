@@ -10,13 +10,14 @@ namespace CurrencyClassLib
     public class CurrencyDataAccess
     {
 
-        public String GetJSON ()
+        public static String GetJSON ()
         {
             String url = "http://api.fixer.io/";
 
             var json = new WebClient().DownloadString(url);
 
             return json;
+
         }
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CurrencyClassLib
 {
-    class CurrencyModelcs
+    public class CurrencyModel
     {
         public string @base { get; set; }
         public string date { get; set; }

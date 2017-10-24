@@ -10,10 +10,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void TestGetJSON()
         {
-
-            CurrencyDataAccess cd = new CurrencyDataAccess();
-
-            String jsonData = cd.GetJSON();
+            String jsonData = CurrencyDataAccess.GetJSON();
 
             Assert.AreEqual(jsonData.Length, 0);
         }
