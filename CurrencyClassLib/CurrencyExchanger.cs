@@ -12,35 +12,44 @@ namespace CurrencyClassLib
 
         private static CurrencyModel currencyModel;
 
-        public CurrencyExchanger ()
+        public CurrencyExchanger()
         {
             if (currencyModel == null)
             {
-                // Need to specifiy base currency
-                String currencyJson = CurrencyDataAccess.GetJSON();
-                currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
+                // Set the Currency Model with the default currency
+                SetCurrencyModel("USD");
             }
         }
 
-        public Rates GetExchangeRatesList(String baseCurrency)
+        private void SetCurrencyModel(String baseCurrencyCode)
         {
-            /*
-            if (currencyModel.@base.Equals(baseCurrency))
+            String currencyJson = CurrencyDataAccess.GetJSON(baseCurrencyCode);
+            currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
+        }
+
+        public Rates GetExchangeRatesList(String baseCurrencyCode)
+        {
+            if (!currencyModel.@base.Equals(baseCurrencyCode))
             {
-                return currencyModel.rates;
+                SetCurrencyModel(baseCurrencyCode);
             }
-            */
 
             return currencyModel.rates;
-
         }
 
-        public double GetExchangeRate (String fromCurrencyCode, String toCurrencyCode)
+        public double GetExchangeRate(String baseCurrencyCode, String toCurrencyCode)
         {
-            return 0.5;
+            if (!currencyModel.@base.Equals(baseCurrencyCode))
+            {
+                SetCurrencyModel(baseCurrencyCode);
+            }
+
+            // Using reflection to get the value of property from the property name as a String
+            return (double)currencyModel.rates.GetType().GetProperty(toCurrencyCode).GetValue(currencyModel.rates, null);
+
         }
 
-        public double Convert (double value, String fromCurrency, String toCurrency)
+        public double Convert(double value, String fromCurrency, String toCurrency)
         {
             double rate = GetExchangeRate(fromCurrency, toCurrency);
 
