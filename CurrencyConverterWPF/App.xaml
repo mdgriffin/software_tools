@@ -134,10 +134,37 @@
         </x:Array>
 
         <x:Array x:Key="Currencies" Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
-            <sys:String>Euro</sys:String>
-            <sys:String>Dollar</sys:String>
-            <sys:String>Pound</sys:String>
-            <sys:String>Yen</sys:String>
+            <sys:String>Australian Dollar (AUD)</sys:String>
+            <sys:String>(BGN)</sys:String>
+            <sys:String>(BRL)</sys:String>
+            <sys:String>(CAD)</sys:String>
+            <sys:String>(CHF)</sys:String>
+            <sys:String>(CNY)</sys:String>
+            <sys:String>(CZK)</sys:String>
+            <sys:String>(DKK)</sys:String>
+            <sys:String>(GBP)</sys:String>
+            <sys:String>(HKD)</sys:String>
+            <sys:String>(HRK)</sys:String>
+            <sys:String>(HUF)</sys:String>
+            <sys:String>(IDR)</sys:String>
+            <sys:String>(ILS)</sys:String>
+            <sys:String>(INR)</sys:String>
+            <sys:String>(JPY)</sys:String>
+            <sys:String>(KRW)</sys:String>
+            <sys:String>(MXN)</sys:String>
+            <sys:String>(MYR)</sys:String>
+            <sys:String>(NOK)</sys:String>
+            <sys:String>New Zealand Dollar(NZD)</sys:String>
+            <sys:String>(PHP)</sys:String>
+            <sys:String>(PLN)</sys:String>
+            <sys:String>(RON)</sys:String>
+            <sys:String>(RUB)</sys:String>
+            <sys:String>(SEK)</sys:String>
+            <sys:String>(SGD)</sys:String>
+            <sys:String>(THB)</sys:String>
+            <sys:String>(TRY)</sys:String>
+            <sys:String>US Dollar (USD)</sys:String>
+            <sys:String>(ZAR)</sys:String>
         </x:Array>
 
         <ControlTemplate x:Key="inputError">
