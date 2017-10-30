@@ -10,28 +10,21 @@ namespace CurrencyClassLib
     public class CurrencyDataAccess
     {
 
-        public static String GetJSON ()
-        {
-            String url = "http://api.fixer.io/latest";
+        private static String baseUrl = "http://api.fixer.io/latest";
 
-            var json = new WebClient().DownloadString(url);
+        public static String GetJSON()
+        {
+            var json = new WebClient().DownloadString(baseUrl);
 
             return json;
-
         }
 
-
-        /*
-        public Rates GetRates (String baseCurrency)
+        public static String GetJSON(String baseCurrencyCode)
         {
+            var json = new WebClient().DownloadString(baseUrl + "?base=" + baseCurrencyCode);
 
+            return json;
         }
-
-        public Rates GetRates(String baseCurrency, DateTime date)
-        {
-
-        }
-        */
 
     }
 }
