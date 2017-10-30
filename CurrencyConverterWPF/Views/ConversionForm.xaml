@@ -21,7 +21,7 @@
 
         <WrapPanel Margin="0,5">
             <Label Content="Currency" MinWidth="100"/>
-            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" ItemsSource="{StaticResource Currencies}" SelectedItem="{Binding currency.fromCurrency}"/>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" ItemsSource="{StaticResource Currencies}" SelectedItem="{Binding currency.fromCode}"/>
         </WrapPanel>
 
         <WrapPanel Margin="0,5">
@@ -31,7 +31,7 @@
 
         <WrapPanel Margin="0,5">
             <Label Content="Currency" MinWidth="100"/>
-            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" ItemsSource="{StaticResource Currencies}" SelectedItem="{Binding currency.toCurrency}"/>
+            <ComboBox HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" ItemsSource="{StaticResource Currencies}" SelectedItem="{Binding currency.toCode}"/>
         </WrapPanel>
 
         <Button Name="btnText" Margin="0 10 0 0" Content="{Binding btnText, Mode=OneTime}" Command="{Binding saveMaterialCommand}" ToolTip="{Binding btnText, Mode=OneTime}" />

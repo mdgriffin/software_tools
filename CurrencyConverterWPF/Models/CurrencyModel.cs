@@ -27,16 +27,74 @@ namespace CurrencyConverterFrontend.Models
             }
         }
 
-        public CurrencyModel(String from)
+        public String _to;
+        public String to
         {
-            this._from = from;
+            get
+            {
+                return this._to;
+            }
+            set
+            {
+                if (value != _to)
+                {
+                    this._from = value;
+                    validateProp("to");
+                    NotifyPropertyChanged("to");
+                }
+            }
         }
 
-        public CurrencyModel() : this("") { }
+        public String _fromCode;
+        public String fromCode
+        {
+            get
+            {
+                return this._fromCode;
+            }
+            set
+            {
+                if (value != _fromCode)
+                {
+                    this._from = value;
+                    validateProp("fromCode");
+                    NotifyPropertyChanged("fromCode");
+                }
+            }
+        }
+
+        public String _toCode;
+        public String toCode
+        {
+            get
+            {
+                return this._toCode;
+            }
+            set
+            {
+                if (value != _toCode)
+                {
+                    this._from = value;
+                    validateProp("toCode");
+                    NotifyPropertyChanged("toCode");
+                }
+            }
+        }
+
+        public CurrencyModel(String fromCode, String from, String toCode, String to)
+        {
+            this._fromCode = fromCode;
+            this._from = from;
+            this._toCode = toCode;
+            this._to = to;
+        }
+
+        public CurrencyModel() : this("", "", "", "") { }
 
         public override void validateAllProps()
         {
             validateProp("from");
+            validateProp("to");
         }
 
         public override void validateProp(String propertyName)
@@ -50,6 +108,16 @@ namespace CurrencyConverterFrontend.Models
                     {
                         errorMessage = Validator.ERROR_IS_EMPTY;
                     } else if (!Validator.isPrice(from))
+                    {
+                        errorMessage = Validator.ERROR_IS_PRICE;
+                    }
+                    break;
+                case "to":
+                    if (Validator.isEmpty(to))
+                    {
+                        errorMessage = Validator.ERROR_IS_EMPTY;
+                    }
+                    else if (!Validator.isPrice(to))
                     {
                         errorMessage = Validator.ERROR_IS_PRICE;
                     }
