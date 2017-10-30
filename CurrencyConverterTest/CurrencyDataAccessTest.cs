@@ -14,5 +14,13 @@ namespace CurrencyConverterTest
 
             Assert.IsTrue(jsonData.Length > 0);
         }
+
+        [TestMethod]
+        public void TestGetJSONForCurrency()
+        {
+            String jsonData = CurrencyDataAccess.GetJSON("EUR");
+
+            Assert.IsTrue(jsonData.Length > 0);
+        }
     }
 }
