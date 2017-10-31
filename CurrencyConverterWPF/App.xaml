@@ -135,36 +135,36 @@
 
         <x:Array x:Key="Currencies" Type="sys:String" xmlns:sys="clr-namespace:System;assembly=mscorlib">
             <sys:String>Australian Dollar (AUD)</sys:String>
-            <sys:String>(BGN)</sys:String>
-            <sys:String>(BRL)</sys:String>
-            <sys:String>(CAD)</sys:String>
-            <sys:String>(CHF)</sys:String>
-            <sys:String>(CNY)</sys:String>
-            <sys:String>(CZK)</sys:String>
-            <sys:String>(DKK)</sys:String>
-            <sys:String>(GBP)</sys:String>
-            <sys:String>(HKD)</sys:String>
-            <sys:String>(HRK)</sys:String>
-            <sys:String>(HUF)</sys:String>
-            <sys:String>(IDR)</sys:String>
-            <sys:String>(ILS)</sys:String>
-            <sys:String>(INR)</sys:String>
-            <sys:String>(JPY)</sys:String>
-            <sys:String>(KRW)</sys:String>
-            <sys:String>(MXN)</sys:String>
-            <sys:String>(MYR)</sys:String>
-            <sys:String>(NOK)</sys:String>
+            <sys:String>Bulgarian Lev (BGN)</sys:String>
+            <sys:String>Brazilian Real (BRL)</sys:String>
+            <sys:String>Canadian Dollar (CAD)</sys:String>
+            <sys:String>Swiss Franc (CHF)</sys:String>
+            <sys:String>Chinese Yuan (CNY)</sys:String>
+            <sys:String>Czech Koruna (CZK)</sys:String>
+            <sys:String>Danish Krone (DKK)</sys:String>
+            <sys:String>British Pound (GBP)</sys:String>
+            <sys:String>Hong Kong Dollar (HKD)</sys:String>
+            <sys:String>Croatian Kuna (HRK)</sys:String>
+            <sys:String>Hungarian Forint (HUF)</sys:String>
+            <sys:String>Indonesian Rupiah (IDR)</sys:String>
+            <sys:String>Israeli New Sheke (ILS)</sys:String>
+            <sys:String>Indian Rupee (INR)</sys:String>
+            <sys:String>Japanese Yen (JPY)</sys:String>
+            <sys:String>South Korean Won (KRW)</sys:String>
+            <sys:String>Mexican Peso (MXN)</sys:String>
+            <sys:String>Malaysian Ringgit (MYR)</sys:String>
+            <sys:String>Norwegian Krone (NOK)</sys:String>
             <sys:String>New Zealand Dollar(NZD)</sys:String>
-            <sys:String>(PHP)</sys:String>
-            <sys:String>(PLN)</sys:String>
-            <sys:String>(RON)</sys:String>
-            <sys:String>(RUB)</sys:String>
-            <sys:String>(SEK)</sys:String>
-            <sys:String>(SGD)</sys:String>
-            <sys:String>(THB)</sys:String>
-            <sys:String>(TRY)</sys:String>
+            <sys:String>Philippine Peso (PHP)</sys:String>
+            <sys:String>Polish Zloty(PLN)</sys:String>
+            <sys:String>Romanian Leu (RON)</sys:String>
+            <sys:String>Russian Ruble(RUB)</sys:String>
+            <sys:String>Swedish Krona (SEK)</sys:String>
+            <sys:String>Singapore Dollar (SGD)</sys:String>
+            <sys:String>Thai Baht (THB)</sys:String>
+            <sys:String>Turkish Lira (TRY)</sys:String>
             <sys:String>US Dollar (USD)</sys:String>
-            <sys:String>(ZAR)</sys:String>
+            <sys:String>South African Rand (ZAR)</sys:String>
         </x:Array>
 
         <ControlTemplate x:Key="inputError">
