@@ -8,6 +8,12 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
 
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="64" />
+            <Setter Property="Width" Value="64" />
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality" />
+        </Style>
+
         <!-- App Styling -->
         <Style x:Key="MainHeading" TargetType="{x:Type Label}">
             <Setter Property="FontSize" Value="28"/>

@@ -171,9 +171,24 @@
     <Content Include="Views\Resources\CountryFlags\aud.svg">
       <Generator>MSBuild:Compile</Generator>
     </Content>
+    <Resource Include="Views\Resources\CountryFlags\krw.png" />
+    <Resource Include="Views\Resources\CountryFlags\myr.png" />
+    <Resource Include="Views\Resources\CountryFlags\ron.png" />
+    <Resource Include="Views\Resources\CountryFlags\rub.png" />
+    <Resource Include="Views\Resources\CountryFlags\czk.png" />
+    <Resource Include="Views\Resources\CountryFlags\gbp.png" />
+    <Resource Include="Views\Resources\CountryFlags\huf.png" />
+    <Resource Include="Views\Resources\CountryFlags\idr.png" />
+    <Resource Include="Views\Resources\CountryFlags\jpy.png" />
+    <Resource Include="Views\Resources\CountryFlags\bgn.png" />
+    <Resource Include="Views\Resources\CountryFlags\chf.png" />
+    <Resource Include="Views\Resources\CountryFlags\dkk.png" />
+    <Resource Include="Views\Resources\CountryFlags\nok.png" />
+    <Resource Include="Views\Resources\CountryFlags\nzd.png" />
     <Content Include="Views\Resources\CountryFlags\nzd.svg">
       <Generator>MSBuild:Compile</Generator>
     </Content>
+    <Resource Include="Views\Resources\CountryFlags\usd.png" />
     <Content Include="Views\Resources\CountryFlags\usd.svg">
       <Generator>MSBuild:Compile</Generator>
     </Content>
