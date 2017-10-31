@@ -2,7 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              xmlns:local="clr-namespace:CurrencyConverterFrontend.Views"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="725">
@@ -13,6 +14,24 @@
         </WrapPanel>
 
         <Label Content="{Binding txtHeading, Mode=OneTime}" Style="{StaticResource MainHeading}" />
+
+        <WrapPanel>
+            <svgc:SvgViewbox Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Content="Australian Dollar: " />
+            <Label Content="{Binding rates.AUD}" />
+        </WrapPanel>
+
+        <WrapPanel>
+            <svgc:SvgViewbox Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/usd.svg"/>
+            <Label Content="US Dollar: " />
+            <Label Content="{Binding rates.USD}" />
+        </WrapPanel>
+
+        <WrapPanel>
+            <svgc:SvgViewbox Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/nzd.svg"/>
+            <Label Content="New Zealand Dollar: " />
+            <Label Content="{Binding rates.NZD}" />
+        </WrapPanel>
 
     </StackPanel>
 </UserControl>

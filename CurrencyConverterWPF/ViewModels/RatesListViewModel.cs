@@ -16,13 +16,13 @@ namespace CurrencyConverterFrontend.ViewModels
 
             CurrencyExchanger cx = new CurrencyExchanger();
 
-            currencyRates = cx.GetExchangeRatesList();
+            rates = cx.GetExchangeRatesList();
 
-            txtHeading = "Current Rates";
+            txtHeading = "Euro Rates";
         }
 
         // Properties accessible from the view
-        public Rates currencyRates { get; set; }
+        public Rates rates { get; set; }
         public String txtHeading { get; set; }
     }
 }
