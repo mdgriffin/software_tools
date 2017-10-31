@@ -171,6 +171,9 @@
     <Content Include="Views\Resources\CountryFlags\aud.svg">
       <Generator>MSBuild:Compile</Generator>
     </Content>
+    <Resource Include="Views\Resources\CountryFlags\pln.png" />
+    <Resource Include="Views\Resources\CountryFlags\thb.png" />
+    <Resource Include="Views\Resources\CountryFlags\try.png" />
     <Resource Include="Views\Resources\CountryFlags\krw.png" />
     <Resource Include="Views\Resources\CountryFlags\myr.png" />
     <Resource Include="Views\Resources\CountryFlags\ron.png" />
