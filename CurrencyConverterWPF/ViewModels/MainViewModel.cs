@@ -12,7 +12,7 @@ namespace CurrencyConverterFrontend.ViewModels
             navigateTo(new ConversionFormViewModel(this));
         }
 
-        public ICommand goToConversionForm
+        public ICommand GoToConversionForm
         {
             get
             {
@@ -20,7 +20,7 @@ namespace CurrencyConverterFrontend.ViewModels
             }
         }
 
-        public ICommand goToRatesListing
+        public ICommand GoToRatesListing
         {
             get
             {
