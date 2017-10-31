@@ -182,6 +182,9 @@
             <views:ConversionForm />
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewModels:RatesListViewModel}">
+            <views:RatesListing />
+        </DataTemplate>
 
         <!--
         <local:RadioAccountTypeConverter x:Key="RadioButtonCheckedConverter" />

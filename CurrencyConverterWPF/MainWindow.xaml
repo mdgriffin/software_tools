@@ -63,8 +63,8 @@
                         <VirtualizingStackPanel Orientation="Vertical"/>
                     </ItemsPanelTemplate>
                 </Menu.ItemsPanel>
-                <MenuItem Header="_Do Something" Style="{StaticResource navItem}" Command="{Binding doSomething}"/>
-                <MenuItem Header="_Do Something else" Style="{StaticResource navItem}" Command="{Binding doSomethingElse}"/>
+                <MenuItem Header="Convert Currencies" Style="{StaticResource navItem}" Command="{Binding goToConversionForm}"/>
+                <MenuItem Header="Currency Rates" Style="{StaticResource navItem}" Command="{Binding goToRatesListing}"/>
             </Menu>
 
             <Separator Style="{StaticResource navSep}" />

@@ -12,31 +12,21 @@ namespace CurrencyConverterFrontend.ViewModels
             navigateTo(new ConversionFormViewModel(this));
         }
 
-        public ICommand doSomething
+        public ICommand goToConversionForm
         {
             get
             {
-                return new RelayCommand(param => System.Windows.MessageBox.Show("Do Something"), param => true);
+                return new RelayCommand(param => navigateTo(new ConversionFormViewModel(this)), param => true);
             }
         }
 
-        public ICommand doSomethingElse
+        public ICommand goToRatesListing
         {
             get
             {
-                return new RelayCommand(param => System.Windows.MessageBox.Show("Do Something Else"), param => true);
+                return new RelayCommand(param => navigateTo(new RatesListViewModel(this)), param => true);
             }
         }
-
-        /*
-        public ICommand goToSettings
-        {
-            get
-            {
-                return new RelayCommand(param => navigateTo(new SettingsViewModel(this)), param => true);
-            }
-        }
-        */
 
     }
 }

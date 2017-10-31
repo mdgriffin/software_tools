@@ -29,6 +29,7 @@ namespace CurrencyClassLib
 
         public Rates GetExchangeRatesList()
         {
+            // The default currency
             return GetExchangeRatesList("EUR");
         }
 

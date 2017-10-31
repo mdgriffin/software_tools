@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:CurrencyConverterFrontend.Views"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="725">
-    <StackPanel Name="frmReg" Margin="20">
+    <StackPanel Name="frmConversion" Margin="20">
 
         <WrapPanel HorizontalAlignment="Left">
             <Button Content="&#x2190; Back" Margin="0 0 20 0" Height="25"  Background="Transparent" BorderBrush="Transparent" Command="{Binding backCmd}" />
