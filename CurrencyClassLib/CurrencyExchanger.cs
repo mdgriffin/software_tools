@@ -53,7 +53,7 @@ namespace CurrencyClassLib
         {
             double rate = GetExchangeRate(fromCurrency, toCurrency);
 
-            return value * rate;
+            return (double)decimal.Round((decimal)(value * rate), 2, MidpointRounding.AwayFromZero);
         }
 
     }
