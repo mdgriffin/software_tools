@@ -18,11 +18,11 @@ namespace CurrencyConverterFrontend.ViewModels
 
             currencyRates = cx.GetExchangeRatesList();
 
-            btnHeading = "Current Rates";
+            txtHeading = "Current Rates";
         }
 
         // Properties accessible from the view
         public Rates currencyRates { get; set; }
-        public String btnHeading { get; set; }
+        public String txtHeading { get; set; }
     }
 }

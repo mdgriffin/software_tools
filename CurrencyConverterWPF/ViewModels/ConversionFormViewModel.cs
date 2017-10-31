@@ -19,12 +19,12 @@ namespace CurrencyConverterFrontend.ViewModels
             currency = new CurrencyFormModel();
 
             btnText = "Convert!";
-            btnHeading = "Convert Currencies";
+            txtHeading = "Convert Currencies";
         }
 
         // Properties accessible from the view
         public CurrencyFormModel currency { get; set; }
-        public String btnHeading { get; set; }
+        public String txtHeading { get; set; }
         public String btnText { get; set; }
 
         public ICommand convertCmd
