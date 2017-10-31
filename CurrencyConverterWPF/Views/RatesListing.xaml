@@ -15,23 +15,59 @@
 
         <Label Content="{Binding txtHeading, Mode=OneTime}" Style="{StaticResource MainHeading}" />
 
-        <WrapPanel>
-            <svgc:SvgViewbox Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
-            <Label Content="Australian Dollar: " />
-            <Label Content="{Binding rates.AUD}" />
-        </WrapPanel>
 
-        <WrapPanel>
-            <svgc:SvgViewbox Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/usd.svg"/>
-            <Label Content="US Dollar: " />
-            <Label Content="{Binding rates.USD}" />
-        </WrapPanel>
+        <Grid>
 
-        <WrapPanel>
-            <svgc:SvgViewbox Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/nzd.svg"/>
-            <Label Content="New Zealand Dollar: " />
-            <Label Content="{Binding rates.NZD}" />
-        </WrapPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <svgc:SvgViewbox Grid.Row="0" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="0" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="1" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="1" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="2" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="2" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="3" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="3" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="4" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="4" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="5" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="5" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="5" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="6" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="6" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="6" Grid.Column="2" Content="1.2345" />
+
+            <svgc:SvgViewbox Grid.Row="7" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+            <Label Grid.Row="7" Grid.Column="1" Content="Australian Dollar: " />
+            <Label Grid.Row="7" Grid.Column="2" Content="1.2345" />
+
+        </Grid>
+        
     </StackPanel>
 </UserControl>
