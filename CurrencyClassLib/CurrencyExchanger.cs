@@ -27,6 +27,11 @@ namespace CurrencyClassLib
             currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
         }
 
+        public Rates GetExchangeRatesList()
+        {
+            return GetExchangeRatesList("EUR");
+        }
+
         public Rates GetExchangeRatesList(String baseCurrencyCode)
         {
             if (!currencyModel.@base.Equals(baseCurrencyCode))
