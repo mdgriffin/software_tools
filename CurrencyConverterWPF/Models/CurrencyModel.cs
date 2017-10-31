@@ -9,7 +9,7 @@ namespace CurrencyConverterFrontend.Models
 {
     public class CurrencyModel: BaseModel, INotifyDataErrorInfo
     {
-        public String _from;
+        private String _from;
         public String from
         {
             get
@@ -27,7 +27,7 @@ namespace CurrencyConverterFrontend.Models
             }
         }
 
-        public String _to;
+        private String _to;
         public String to
         {
             get
@@ -45,7 +45,7 @@ namespace CurrencyConverterFrontend.Models
             }
         }
 
-        public String _fromCode;
+        private String _fromCode;
         public String fromCode
         {
             get
@@ -63,7 +63,7 @@ namespace CurrencyConverterFrontend.Models
             }
         }
 
-        public String _toCode;
+        private String _toCode;
         public String toCode
         {
             get
