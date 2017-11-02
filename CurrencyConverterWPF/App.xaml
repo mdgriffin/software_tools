@@ -143,12 +143,13 @@
             <sys:String>Australian Dollar (AUD)</sys:String>
             <sys:String>Bulgarian Lev (BGN)</sys:String>
             <sys:String>Brazilian Real (BRL)</sys:String>
+            <sys:String>British Pound (GBP)</sys:String>
             <sys:String>Canadian Dollar (CAD)</sys:String>
             <sys:String>Swiss Franc (CHF)</sys:String>
             <sys:String>Chinese Yuan (CNY)</sys:String>
             <sys:String>Czech Koruna (CZK)</sys:String>
             <sys:String>Danish Krone (DKK)</sys:String>
-            <sys:String>British Pound (GBP)</sys:String>
+            <sys:String>Euro (EUR)</sys:String>
             <sys:String>Hong Kong Dollar (HKD)</sys:String>
             <sys:String>Croatian Kuna (HRK)</sys:String>
             <sys:String>Hungarian Forint (HUF)</sys:String>

@@ -16,6 +16,11 @@
             </WrapPanel>
 
             <Label Content="{Binding txtHeading, Mode=OneTime}" Style="{StaticResource MainHeading}" />
+
+            <WrapPanel>
+                <Label Content="Base Currency" MinWidth="150"/>
+                <ComboBox  VerticalAlignment="Center" Width="120" Height="25" Margin="25 0 0 0" ItemsSource="{StaticResource Currencies}" SelectedItem="{Binding baseCurrency}"/>
+            </WrapPanel>
             
             <Grid>
 
@@ -91,97 +96,101 @@
                 <Label Grid.Row="7" Grid.Column="1" Content="Danish Krone: " />
                 <Label Grid.Row="7" Grid.Column="2" Content="{Binding rates.DKK}" />
 
-                <Image Grid.Row="8" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/gbp.png" />
-                <Label Grid.Row="8" Grid.Column="1" Content="British Pound: " />
-                <Label Grid.Row="8" Grid.Column="2" Content="{Binding rates.GBP}" />
+                <Image Grid.Row="8" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/EUR.png" />
+                <Label Grid.Row="8" Grid.Column="1" Content="Euro: " />
+                <Label Grid.Row="8" Grid.Column="2" Content="{Binding rates.EUR}" />
 
-                <Image Grid.Row="9" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/hkd.png" />
-                <Label Grid.Row="9" Grid.Column="1" Content="Hong Kong Dollar: " />
-                <Label Grid.Row="9" Grid.Column="2" Content="{Binding rates.HKD}" />
+                <Image Grid.Row="9" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/gbp.png" />
+                <Label Grid.Row="9" Grid.Column="1" Content="British Pound: " />
+                <Label Grid.Row="9" Grid.Column="2" Content="{Binding rates.GBP}" />
 
-                <Image Grid.Row="10" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/hrk.png" />
-                <Label Grid.Row="10" Grid.Column="1" Content="Croatian Kuna: " />
-                <Label Grid.Row="10" Grid.Column="2" Content="{Binding rates.HRK}" />
+                <Image Grid.Row="10" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/hkd.png" />
+                <Label Grid.Row="10" Grid.Column="1" Content="Hong Kong Dollar: " />
+                <Label Grid.Row="10" Grid.Column="2" Content="{Binding rates.HKD}" />
 
-                <Image Grid.Row="11" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/huf.png" />
-                <Label Grid.Row="11" Grid.Column="1" Content="Hungarian Forint: " />
-                <Label Grid.Row="11" Grid.Column="2" Content="{Binding rates.HUF}" />
+                <Image Grid.Row="11" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/hrk.png" />
+                <Label Grid.Row="11" Grid.Column="1" Content="Croatian Kuna: " />
+                <Label Grid.Row="11" Grid.Column="2" Content="{Binding rates.HRK}" />
 
-                <Image Grid.Row="12" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/idr.png" />
-                <Label Grid.Row="12" Grid.Column="1" Content="Indonesian Rupiah: " />
-                <Label Grid.Row="12" Grid.Column="2" Content="{Binding rates.IDR}" />
+                <Image Grid.Row="12" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/huf.png" />
+                <Label Grid.Row="12" Grid.Column="1" Content="Hungarian Forint: " />
+                <Label Grid.Row="12" Grid.Column="2" Content="{Binding rates.HUF}" />
 
-                <Image Grid.Row="13" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/ils.png" />
-                <Label Grid.Row="13" Grid.Column="1" Content="Israeli New Shekel: " />
-                <Label Grid.Row="13" Grid.Column="2" Content="{Binding rates.ILS}" />
+                <Image Grid.Row="13" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/idr.png" />
+                <Label Grid.Row="13" Grid.Column="1" Content="Indonesian Rupiah: " />
+                <Label Grid.Row="13" Grid.Column="2" Content="{Binding rates.IDR}" />
 
-                <Image Grid.Row="14" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/inr.png" />
-                <Label Grid.Row="14" Grid.Column="1" Content="Indian Rupee: " />
-                <Label Grid.Row="14" Grid.Column="2" Content="{Binding rates.INR}" />
+                <Image Grid.Row="14" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/ils.png" />
+                <Label Grid.Row="14" Grid.Column="1" Content="Israeli New Shekel: " />
+                <Label Grid.Row="14" Grid.Column="2" Content="{Binding rates.ILS}" />
 
-                <Image Grid.Row="15" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/jpy.png" />
-                <Label Grid.Row="15" Grid.Column="1" Content="Japanese Yen: " />
-                <Label Grid.Row="15" Grid.Column="2" Content="{Binding rates.JPY}" />
+                <Image Grid.Row="15" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/inr.png" />
+                <Label Grid.Row="15" Grid.Column="1" Content="Indian Rupee: " />
+                <Label Grid.Row="15" Grid.Column="2" Content="{Binding rates.INR}" />
 
-                <Image Grid.Row="16" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/krw.png" />
-                <Label Grid.Row="16" Grid.Column="1" Content="South Korean Won: " />
-                <Label Grid.Row="16" Grid.Column="2" Content="{Binding rates.KRW}" />
+                <Image Grid.Row="16" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/jpy.png" />
+                <Label Grid.Row="16" Grid.Column="1" Content="Japanese Yen: " />
+                <Label Grid.Row="16" Grid.Column="2" Content="{Binding rates.JPY}" />
 
-                <Image Grid.Row="17" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/mxn.png" />
-                <Label Grid.Row="17" Grid.Column="1" Content="Mexican Peso: " />
-                <Label Grid.Row="17" Grid.Column="2" Content="{Binding rates.MXN}" />
+                <Image Grid.Row="17" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/krw.png" />
+                <Label Grid.Row="17" Grid.Column="1" Content="South Korean Won: " />
+                <Label Grid.Row="17" Grid.Column="2" Content="{Binding rates.KRW}" />
 
-                <Image Grid.Row="18" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/myr.png" />
-                <Label Grid.Row="18" Grid.Column="1" Content="Malaysian Ringgit: " />
-                <Label Grid.Row="18" Grid.Column="2" Content="{Binding rates.MYR}" />
+                <Image Grid.Row="18" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/mxn.png" />
+                <Label Grid.Row="18" Grid.Column="1" Content="Mexican Peso: " />
+                <Label Grid.Row="18" Grid.Column="2" Content="{Binding rates.MXN}" />
 
-                <Image Grid.Row="19" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/nok.png" />
-                <Label Grid.Row="19" Grid.Column="1" Content="Norwegian Krone: " />
-                <Label Grid.Row="19" Grid.Column="2" Content="{Binding rates.NOK}" />
+                <Image Grid.Row="19" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/myr.png" />
+                <Label Grid.Row="19" Grid.Column="1" Content="Malaysian Ringgit: " />
+                <Label Grid.Row="19" Grid.Column="2" Content="{Binding rates.MYR}" />
 
-                <Image Grid.Row="20" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/nzd.png" />
-                <Label Grid.Row="20" Grid.Column="1" Content="New Zealand Dollar: " />
-                <Label Grid.Row="20" Grid.Column="2" Content="{Binding rates.NZD}" />
+                <Image Grid.Row="20" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/nok.png" />
+                <Label Grid.Row="20" Grid.Column="1" Content="Norwegian Krone: " />
+                <Label Grid.Row="20" Grid.Column="2" Content="{Binding rates.NOK}" />
 
-                <Image Grid.Row="21" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/php.png" />
-                <Label Grid.Row="21" Grid.Column="1" Content="Philippine Peso: " />
-                <Label Grid.Row="21" Grid.Column="2" Content="{Binding rates.PHP}" />
+                <Image Grid.Row="21" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/nzd.png" />
+                <Label Grid.Row="21" Grid.Column="1" Content="New Zealand Dollar: " />
+                <Label Grid.Row="21" Grid.Column="2" Content="{Binding rates.NZD}" />
 
-                <Image Grid.Row="22" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/pln.png" />
-                <Label Grid.Row="22" Grid.Column="1" Content="Polish Zloty: " />
-                <Label Grid.Row="22" Grid.Column="2" Content="{Binding rates.PLN}" />
+                <Image Grid.Row="22" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/php.png" />
+                <Label Grid.Row="22" Grid.Column="1" Content="Philippine Peso: " />
+                <Label Grid.Row="22" Grid.Column="2" Content="{Binding rates.PHP}" />
 
-                <Image Grid.Row="23" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/ron.png" />
-                <Label Grid.Row="23" Grid.Column="1" Content="Romanian Leu: " />
-                <Label Grid.Row="23" Grid.Column="2" Content="{Binding rates.RON}" />
+                <Image Grid.Row="23" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/pln.png" />
+                <Label Grid.Row="23" Grid.Column="1" Content="Polish Zloty: " />
+                <Label Grid.Row="23" Grid.Column="2" Content="{Binding rates.PLN}" />
 
-                <Image Grid.Row="24" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/rub.png" />
-                <Label Grid.Row="24" Grid.Column="1" Content="Russian Rubel: " />
-                <Label Grid.Row="24" Grid.Column="2" Content="{Binding rates.RUB}" />
+                <Image Grid.Row="24" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/ron.png" />
+                <Label Grid.Row="24" Grid.Column="1" Content="Romanian Leu: " />
+                <Label Grid.Row="24" Grid.Column="2" Content="{Binding rates.RON}" />
 
-                <Image Grid.Row="25" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/sek.png" />
-                <Label Grid.Row="25" Grid.Column="1" Content="Swedish Krona: " />
-                <Label Grid.Row="25" Grid.Column="2" Content="{Binding rates.SEK}" />
+                <Image Grid.Row="25" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/rub.png" />
+                <Label Grid.Row="25" Grid.Column="1" Content="Russian Rubel: " />
+                <Label Grid.Row="25" Grid.Column="2" Content="{Binding rates.RUB}" />
 
-                <Image Grid.Row="26" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/thb.png" />
-                <Label Grid.Row="26" Grid.Column="1" Content="Singapore Dollar: " />
-                <Label Grid.Row="26" Grid.Column="2" Content="{Binding rates.SGD}" />
+                <Image Grid.Row="26" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/sek.png" />
+                <Label Grid.Row="26" Grid.Column="1" Content="Swedish Krona: " />
+                <Label Grid.Row="26" Grid.Column="2" Content="{Binding rates.SEK}" />
 
                 <Image Grid.Row="27" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/thb.png" />
-                <Label Grid.Row="27" Grid.Column="1" Content="Thai Baht: " />
-                <Label Grid.Row="27" Grid.Column="2" Content="{Binding rates.THB}" />
+                <Label Grid.Row="27" Grid.Column="1" Content="Singapore Dollar: " />
+                <Label Grid.Row="27" Grid.Column="2" Content="{Binding rates.SGD}" />
 
-                <Image Grid.Row="28" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/try.png" />
-                <Label Grid.Row="28" Grid.Column="1" Content="Turkish Lira: " />
-                <Label Grid.Row="28" Grid.Column="2" Content="{Binding rates.TRY}" />
+                <Image Grid.Row="28" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/thb.png" />
+                <Label Grid.Row="28" Grid.Column="1" Content="Thai Baht: " />
+                <Label Grid.Row="28" Grid.Column="2" Content="{Binding rates.THB}" />
 
-                <Image Grid.Row="29" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/usd.png" />
-                <Label Grid.Row="29" Grid.Column="1" Content="US Dollar: " />
-                <Label Grid.Row="29" Grid.Column="2" Content="{Binding rates.USD}" />
+                <Image Grid.Row="29" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/try.png" />
+                <Label Grid.Row="29" Grid.Column="1" Content="Turkish Lira: " />
+                <Label Grid.Row="29" Grid.Column="2" Content="{Binding rates.TRY}" />
 
-                <Image Grid.Row="30" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/zar.png" />
-                <Label Grid.Row="30" Grid.Column="1" Content="South African Rand: " />
-                <Label Grid.Row="30" Grid.Column="2" Content="{Binding rates.ZAR}" />
+                <Image Grid.Row="30" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/usd.png" />
+                <Label Grid.Row="30" Grid.Column="1" Content="US Dollar: " />
+                <Label Grid.Row="30" Grid.Column="2" Content="{Binding rates.USD}" />
+
+                <Image Grid.Row="31" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/zar.png" />
+                <Label Grid.Row="31" Grid.Column="1" Content="South African Rand: " />
+                <Label Grid.Row="31" Grid.Column="2" Content="{Binding rates.ZAR}" />
 
             </Grid>
         

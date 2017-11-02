@@ -19,10 +19,14 @@ namespace CurrencyConverterFrontend.ViewModels
             rates = cx.GetExchangeRatesList();
 
             txtHeading = "Euro Rates";
+
+            baseCurrency = "Euro (EUR)";
         }
 
         // Properties accessible from the view
         public Rates rates { get; set; }
         public String txtHeading { get; set; }
+
+        public String baseCurrency { get; set; }
     }
 }
