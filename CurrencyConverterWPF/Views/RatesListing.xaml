@@ -59,91 +59,91 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
-                <svgc:SvgViewbox Grid.Row="0" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="0" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/aud.png" />
                 <Label Grid.Row="0" Grid.Column="1" Content="Australian Dollar: " />
                 <Label Grid.Row="0" Grid.Column="2" Content="{Binding rates.AUD}" />
 
-                <Image Grid.Row="1" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/bgn.png" />
+                <Image Grid.Row="1" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/bgn.png" />
                 <Label Grid.Row="1" Grid.Column="1" Content="Bulgarian Lev: " />
                 <Label Grid.Row="1" Grid.Column="2" Content="{Binding rates.BGN}" />
 
-                <svgc:SvgViewbox Grid.Row="2" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="2" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/brl.png" />
                 <Label Grid.Row="2" Grid.Column="1" Content="Brazilian Real: " />
                 <Label Grid.Row="2" Grid.Column="2" Content="{Binding rates.BRL}" />
 
-                <svgc:SvgViewbox Grid.Row="3" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="3" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/cad.png" />
                 <Label Grid.Row="3" Grid.Column="1" Content="Canadian Dollar: " />
                 <Label Grid.Row="3" Grid.Column="2" Content="{Binding rates.CAD}" />
 
-                <Image Grid.Row="4" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/chf.png" />
+                <Image Grid.Row="4" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/chf.png" />
                 <Label Grid.Row="4" Grid.Column="1" Content="Swiss Franc: " />
                 <Label Grid.Row="4" Grid.Column="2" Content="{Binding rates.CHF}" />
 
-                <Image Grid.Row="5" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/chf.png" />
+                <Image Grid.Row="5" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/cny.png" />
                 <Label Grid.Row="5" Grid.Column="1" Content="Chinese Yuan: " />
                 <Label Grid.Row="5" Grid.Column="2" Content="{Binding rates.CNY}" />
 
-                <Image Grid.Row="6" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/czk.png" />
+                <Image Grid.Row="6" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/czk.png" />
                 <Label Grid.Row="6" Grid.Column="1" Content="Czech Koruna: " />
                 <Label Grid.Row="6" Grid.Column="2" Content="{Binding rates.CZK}" />
 
-                <Image Grid.Row="7" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/dkk.png" />
+                <Image Grid.Row="7" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/dkk.png" />
                 <Label Grid.Row="7" Grid.Column="1" Content="Danish Krone: " />
                 <Label Grid.Row="7" Grid.Column="2" Content="{Binding rates.DKK}" />
 
-                <Image Grid.Row="8" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/gbp.png" />
+                <Image Grid.Row="8" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/gbp.png" />
                 <Label Grid.Row="8" Grid.Column="1" Content="British Pound: " />
                 <Label Grid.Row="8" Grid.Column="2" Content="{Binding rates.GBP}" />
 
-                <svgc:SvgViewbox Grid.Row="9" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="9" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/hkd.png" />
                 <Label Grid.Row="9" Grid.Column="1" Content="Hong Kong Dollar: " />
                 <Label Grid.Row="9" Grid.Column="2" Content="{Binding rates.HKD}" />
 
-                <svgc:SvgViewbox Grid.Row="10" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="10" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/hrk.png" />
                 <Label Grid.Row="10" Grid.Column="1" Content="Croatian Kuna: " />
                 <Label Grid.Row="10" Grid.Column="2" Content="{Binding rates.HRK}" />
 
-                <Image Grid.Row="5" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/huf.png" />
+                <Image Grid.Row="11" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/huf.png" />
                 <Label Grid.Row="11" Grid.Column="1" Content="Hungarian Forint: " />
                 <Label Grid.Row="11" Grid.Column="2" Content="{Binding rates.HUF}" />
 
-                <Image Grid.Row="12" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/idr.png" />
+                <Image Grid.Row="12" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/idr.png" />
                 <Label Grid.Row="12" Grid.Column="1" Content="Indonesian Rupiah: " />
                 <Label Grid.Row="12" Grid.Column="2" Content="{Binding rates.IDR}" />
 
-                <svgc:SvgViewbox Grid.Row="13" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="13" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/ils.png" />
                 <Label Grid.Row="13" Grid.Column="1" Content="Israeli New Shekel: " />
                 <Label Grid.Row="13" Grid.Column="2" Content="{Binding rates.ILS}" />
 
-                <svgc:SvgViewbox Grid.Row="14" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="14" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/inr.png" />
                 <Label Grid.Row="14" Grid.Column="1" Content="Indian Rupee: " />
                 <Label Grid.Row="14" Grid.Column="2" Content="{Binding rates.INR}" />
 
-                <Image Grid.Row="15" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/jpy.png" />
+                <Image Grid.Row="15" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/jpy.png" />
                 <Label Grid.Row="15" Grid.Column="1" Content="Japanese Yen: " />
                 <Label Grid.Row="15" Grid.Column="2" Content="{Binding rates.JPY}" />
 
-                <Image Grid.Row="16" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/krw.png" />
+                <Image Grid.Row="16" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/krw.png" />
                 <Label Grid.Row="16" Grid.Column="1" Content="South Korean Won: " />
                 <Label Grid.Row="16" Grid.Column="2" Content="{Binding rates.KRW}" />
 
-                <svgc:SvgViewbox Grid.Row="17" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="17" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/mxn.png" />
                 <Label Grid.Row="17" Grid.Column="1" Content="Mexican Peso: " />
                 <Label Grid.Row="17" Grid.Column="2" Content="{Binding rates.MXN}" />
 
-                <Image Grid.Row="18" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/myr.png" />
+                <Image Grid.Row="18" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/myr.png" />
                 <Label Grid.Row="18" Grid.Column="1" Content="Malaysian Ringgit: " />
                 <Label Grid.Row="18" Grid.Column="2" Content="{Binding rates.MYR}" />
 
-                <Image Grid.Row="19" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/nok.png" />
+                <Image Grid.Row="19" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/nok.png" />
                 <Label Grid.Row="19" Grid.Column="1" Content="Norwegian Krone: " />
                 <Label Grid.Row="19" Grid.Column="2" Content="{Binding rates.NOK}" />
 
-                <Image Grid.Row="20" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/nzd.png" />
+                <Image Grid.Row="20" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/nzd.png" />
                 <Label Grid.Row="20" Grid.Column="1" Content="New Zealand Dollar: " />
                 <Label Grid.Row="20" Grid.Column="2" Content="{Binding rates.NZD}" />
 
-                <svgc:SvgViewbox Grid.Row="21" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="21" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/php.png" />
                 <Label Grid.Row="21" Grid.Column="1" Content="Philippine Peso: " />
                 <Label Grid.Row="21" Grid.Column="2" Content="{Binding rates.PHP}" />
 
@@ -151,35 +151,35 @@
                 <Label Grid.Row="22" Grid.Column="1" Content="Polish Zloty: " />
                 <Label Grid.Row="22" Grid.Column="2" Content="{Binding rates.PLN}" />
 
-                <Image Grid.Row="23" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/ron.png" />
+                <Image Grid.Row="23" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/ron.png" />
                 <Label Grid.Row="23" Grid.Column="1" Content="Romanian Leu: " />
                 <Label Grid.Row="23" Grid.Column="2" Content="{Binding rates.RON}" />
 
-                <Image Grid.Row="24" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/rub.png" />
+                <Image Grid.Row="24" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/rub.png" />
                 <Label Grid.Row="24" Grid.Column="1" Content="Russian Rubel: " />
                 <Label Grid.Row="24" Grid.Column="2" Content="{Binding rates.RUB}" />
 
-                <svgc:SvgViewbox Grid.Row="25" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="25" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/sek.png" />
                 <Label Grid.Row="25" Grid.Column="1" Content="Swedish Krona: " />
                 <Label Grid.Row="25" Grid.Column="2" Content="{Binding rates.SEK}" />
 
-                <svgc:SvgViewbox Grid.Row="26" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="26" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/thb.png" />
                 <Label Grid.Row="26" Grid.Column="1" Content="Singapore Dollar: " />
                 <Label Grid.Row="26" Grid.Column="2" Content="{Binding rates.SGD}" />
 
-                <Image Grid.Row="27" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/thb.png" />
+                <Image Grid.Row="27" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/thb.png" />
                 <Label Grid.Row="27" Grid.Column="1" Content="Thai Baht: " />
                 <Label Grid.Row="27" Grid.Column="2" Content="{Binding rates.THB}" />
 
-                <Image Grid.Row="28" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/try.png" />
+                <Image Grid.Row="28" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/try.png" />
                 <Label Grid.Row="28" Grid.Column="1" Content="Turkish Lira: " />
                 <Label Grid.Row="28" Grid.Column="2" Content="{Binding rates.TRY}" />
 
-                <Image Grid.Row="29" Grid.Column="0" Width="30" Height="22" Source="Resources/CountryFlags/usd.png" />
+                <Image Grid.Row="29" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/usd.png" />
                 <Label Grid.Row="29" Grid.Column="1" Content="US Dollar: " />
                 <Label Grid.Row="29" Grid.Column="2" Content="{Binding rates.USD}" />
 
-                <svgc:SvgViewbox Grid.Row="30" Grid.Column="0"  Margin="5" Height="30" Width="40" Stretch="Uniform" Source="Resources/CountryFlags/aud.svg"/>
+                <Image Grid.Row="30" Grid.Column="0" Width="30" Height="20" Source="Resources/CountryFlags/zar.png" />
                 <Label Grid.Row="30" Grid.Column="1" Content="South African Rand: " />
                 <Label Grid.Row="30" Grid.Column="2" Content="{Binding rates.ZAR}" />
 
