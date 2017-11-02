@@ -17,7 +17,6 @@ namespace CurrencyConverterFrontend.ViewModels
 
             cx = new CurrencyExchanger();
 
-            txtHeading = "Euro Rates";
             baseCurrency = "Euro (EUR)";
         }
 
@@ -39,7 +38,21 @@ namespace CurrencyConverterFrontend.ViewModels
                 }
             }
         }
-        public String txtHeading { get; set; }
+        private String _txtHeading;
+        public String txtHeading {
+            get
+            {
+                return _txtHeading;
+            }
+            set
+            {
+                if (value != _txtHeading)
+                {
+                    _txtHeading = value;
+                    NotifyPropertyChanged("txtHeading");
+                }
+            }
+        }
 
         private String _baseCurrency;
         public String baseCurrency {
@@ -53,14 +66,15 @@ namespace CurrencyConverterFrontend.ViewModels
                 {
                     _baseCurrency = value;
                     NotifyPropertyChanged("baseCurrency");
-                    changeCurrencyList();
+                    OnSetBaseCurrency();
                 }
                 
             }
         }
 
-        private void changeCurrencyList ()
+        private void OnSetBaseCurrency ()
         {
+            txtHeading = "Rates For " + baseCurrency;
             String baseCurrencyCode = baseCurrency.Substring(baseCurrency.Length - 4, 3);
             rates = cx.GetExchangeRatesList(baseCurrencyCode);
         }

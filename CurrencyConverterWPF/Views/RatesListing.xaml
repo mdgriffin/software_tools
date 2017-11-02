@@ -15,7 +15,7 @@
                 <Button Content="&#x2190; Back" Margin="0 0 20 0" Height="25"  Background="Transparent" BorderBrush="Transparent" Command="{Binding backCmd}" />
             </WrapPanel>
 
-            <Label Content="{Binding txtHeading, Mode=OneTime}" Style="{StaticResource MainHeading}" />
+            <Label Content="{Binding txtHeading}" Style="{StaticResource MainHeading}" />
 
             <WrapPanel>
                 <Label Content="Base Currency" MinWidth="150"/>
