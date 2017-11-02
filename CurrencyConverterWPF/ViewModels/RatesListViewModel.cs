@@ -24,7 +24,21 @@ namespace CurrencyConverterFrontend.ViewModels
         private CurrencyExchanger cx;
 
         // Properties accessible from the view
-        public Rates rates { get; set; }
+        private Rates _rates;
+        public Rates rates {
+            get
+            {
+                return _rates;
+            }
+            set
+            {
+                if (value != _rates)
+                {
+                    _rates = value;
+                    NotifyPropertyChanged("rates");
+                }
+            }
+        }
         public String txtHeading { get; set; }
 
         private String _baseCurrency;
