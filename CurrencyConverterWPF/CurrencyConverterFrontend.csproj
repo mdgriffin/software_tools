@@ -166,7 +166,21 @@
       <Name>CurrencyClassLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Views\Resources\CountryFlags\aud.png" />
+    <Resource Include="Views\Resources\CountryFlags\brl.png" />
+    <Resource Include="Views\Resources\CountryFlags\cad.png" />
+    <Resource Include="Views\Resources\CountryFlags\cny.png" />
+    <Resource Include="Views\Resources\CountryFlags\hkd.png" />
+    <Resource Include="Views\Resources\CountryFlags\hrk.png" />
+    <Resource Include="Views\Resources\CountryFlags\ils.png" />
+    <Resource Include="Views\Resources\CountryFlags\inr.png" />
+    <Resource Include="Views\Resources\CountryFlags\mxn.png" />
+    <Resource Include="Views\Resources\CountryFlags\php.png" />
+    <Resource Include="Views\Resources\CountryFlags\sek.png" />
+    <Resource Include="Views\Resources\CountryFlags\sgd.png" />
+    <Resource Include="Views\Resources\CountryFlags\zar.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Resources\CountryFlags\pln.png" />
     <Resource Include="Views\Resources\CountryFlags\thb.png" />
