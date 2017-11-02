@@ -16,7 +16,7 @@ namespace CurrencyConverterFrontend.ViewModels
         {
             this.parent = parent;
 
-            currency = new CurrencyFormModel();
+            currency = new CurrencyFormModel("Euro (EUR)", "0", "US Dollar (USD)", "0");
 
             btnText = "Convert!";
             txtHeading = "Convert Currencies";
