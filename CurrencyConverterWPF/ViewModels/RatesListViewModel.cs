@@ -74,7 +74,7 @@ namespace CurrencyConverterFrontend.ViewModels
 
         private void OnSetBaseCurrency ()
         {
-            txtHeading = "Rates For " + baseCurrency;
+            txtHeading = "Rates For " + baseCurrency.Substring(0, baseCurrency.Length - 5);
             String baseCurrencyCode = baseCurrency.Substring(baseCurrency.Length - 4, 3);
             rates = cx.GetExchangeRatesList(baseCurrencyCode);
         }
