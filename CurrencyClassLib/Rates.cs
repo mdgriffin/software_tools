@@ -16,6 +16,7 @@ namespace CurrencyClassLib
         public double CNY { get; set; }
         public double CZK { get; set; }
         public double DKK { get; set; }
+        public double EUR { get; set; }
         public double GBP { get; set; }
         public double HKD { get; set; }
         public double HRK { get; set; }
