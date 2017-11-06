@@ -19,5 +19,7 @@ namespace CurrencyConverterFrontend
         public string DestinationCurrency { get; set; }
         public Nullable<decimal> Amount { get; set; }
         public Nullable<decimal> ConvertedAmount { get; set; }
+        public int ConversionId { get; set; }
+        public Nullable<System.DateTime> DateConverted { get; set; }
     }
 }
