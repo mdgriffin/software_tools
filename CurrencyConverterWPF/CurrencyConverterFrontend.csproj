@@ -87,8 +87,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Conversion.cs" />
+    <Compile Include="Conversion.cs">
+      <DependentUpon>CurrencyConverter.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyConverter.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrencyConverter.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyConverter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrencyConverter.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CurrencyConverter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CurrencyConverter.edmx</DependentUpon>
+    </Compile>
     <Compile Include="CurrencyEntityModel.cs" />
+    <Compile Include="database_firewall_rules.cs">
+      <DependentUpon>CurrencyConverter.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CurrencyFormModel.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Validator.cs" />
@@ -151,6 +171,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="CurrencyConverter.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CurrencyConverter.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CurrencyConverter.edmx.diagram">
+      <DependentUpon>CurrencyConverter.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,6 +230,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\Resources\CountryFlags\eur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CurrencyConverter.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CurrencyConverter.edmx</DependentUpon>
+      <LastGenOutput>CurrencyConverter.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CurrencyConverter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CurrencyConverter.edmx</DependentUpon>
+      <LastGenOutput>CurrencyConverter.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

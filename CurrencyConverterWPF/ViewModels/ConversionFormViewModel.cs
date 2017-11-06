@@ -49,7 +49,26 @@ namespace CurrencyConverterFrontend.ViewModels
                 String toCurrencyCode = currency.toCode.Substring(currency.toCode.Length - 4, 3);
 
                 currency.to = cx.Convert(Double.Parse(currency.from), fromCurrencyCode, toCurrencyCode).ToString();
+
+                using (var ctx = new CurrencyEntityModel())
+                {
+
+                    //Can perform CRUD operation using ctx here..
+                    //Conversion conv = ctx.Conversions.Find(1);
+                    Conversion conv = new Conversion
+                    {
+                        SourceCurrency = fromCurrencyCode,
+                        DestinationCurrency = toCurrencyCode,
+                        Amount = Decimal.Parse(currency.from),
+                        ConvertedAmount = Decimal.Parse(currency.from)
+                    };
+
+                    ctx.Conversions.Add(conv);
+                    ctx.SaveChanges();
+                }
+
             }
+
         }
     }
 }

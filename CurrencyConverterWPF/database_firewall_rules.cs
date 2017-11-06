@@ -12,12 +12,13 @@ namespace CurrencyConverterFrontend
     using System;
     using System.Collections.Generic;
     
-    public partial class Conversion
+    public partial class database_firewall_rules
     {
-        public int ConversionID { get; set; }
-        public string SourceCurrency { get; set; }
-        public string DestinationCurrency { get; set; }
-        public Nullable<decimal> Amount { get; set; }
-        public Nullable<decimal> ConvertedAmount { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string start_ip_address { get; set; }
+        public string end_ip_address { get; set; }
+        public System.DateTime create_date { get; set; }
+        public System.DateTime modify_date { get; set; }
     }
 }
