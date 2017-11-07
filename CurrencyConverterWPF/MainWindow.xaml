@@ -50,12 +50,10 @@
 
         <StackPanel DockPanel.Dock="Left" Background="White" Width="275">
 
-            <StackPanel Background="#1089F2">
+            <StackPanel Background="#f44242">
                 <TextBlock Text="Currency Conveter" Foreground="White" Margin="10 10 10 0" FontSize="28" FontFamily="Impact" />
-                <TextBlock Text="Insert subtext here" Foreground="White" Margin="10 0 10 10" FontSize="15" />
+                <TextBlock Text="For all your currency conversion needs" Foreground="White" Margin="10 0 10 10" FontSize="15" />
             </StackPanel>
-
-            <Label Content="Section Title" Style="{StaticResource navHeading}"/>
 
             <Menu Style="{StaticResource nav}">
                 <Menu.ItemsPanel>
@@ -65,17 +63,6 @@
                 </Menu.ItemsPanel>
                 <MenuItem Header="Convert Currencies" Style="{StaticResource navItem}" Command="{Binding GoToConversionForm}"/>
                 <MenuItem Header="Currency Rates" Style="{StaticResource navItem}" Command="{Binding GoToRatesListing}"/>
-            </Menu>
-
-            <Separator Style="{StaticResource navSep}" />
-
-            <Menu Style="{StaticResource nav}">
-                <Menu.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel Orientation="Vertical"/>
-                    </ItemsPanelTemplate>
-                </Menu.ItemsPanel>
-                <MenuItem Header="_Settings" Style="{StaticResource navItem}" Command="{Binding goToSettings}" />
             </Menu>
 
         </StackPanel>
