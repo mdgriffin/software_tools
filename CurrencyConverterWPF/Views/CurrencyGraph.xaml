@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="CurrencyConverterFrontend.Views.CurrencyGraph"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CurrencyConverterFrontend.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="725">
+    <StackPanel Margin="10">
+
+        <WrapPanel HorizontalAlignment="Left">
+            <Button Content="&#x2190; Back" Margin="0 0 20 0" Height="25"  Background="Transparent" BorderBrush="Transparent" Command="{Binding backCmd}" />
+        </WrapPanel>
+
+        <Label Content="{Binding txtHeading}" Style="{StaticResource MainHeading}" />
+
+    </StackPanel>
+</UserControl>

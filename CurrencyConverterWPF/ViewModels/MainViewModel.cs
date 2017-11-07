@@ -36,5 +36,13 @@ namespace CurrencyConverterFrontend.ViewModels
             }
         }
 
+        public ICommand GoToCurrencyGraph
+        {
+            get
+            {
+                return new RelayCommand(param => navigateTo(new CurrencyGraphViewModel(this)), param => true);
+            }
+        }
+
     }
 }

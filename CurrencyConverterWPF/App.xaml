@@ -197,6 +197,10 @@
             <views:ConversionHistory />
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewModels:CurrencyGraphViewModel}">
+            <views:CurrencyGraph />
+        </DataTemplate>
+
         <!--
         <local:RadioAccountTypeConverter x:Key="RadioButtonCheckedConverter" />
         <local:RadioIsServiceCheckedConverter x:Key="RadioIsServiceCheckedConverter" />
