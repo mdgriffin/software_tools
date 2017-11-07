@@ -28,5 +28,13 @@ namespace CurrencyConverterFrontend.ViewModels
             }
         }
 
+        public ICommand GoToConversionHistory
+        {
+            get
+            {
+                return new RelayCommand(param => navigateTo(new ConversionHistoryViewModel(this)), param => true);
+            }
+        }
+
     }
 }

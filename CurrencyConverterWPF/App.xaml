@@ -193,6 +193,10 @@
             <views:RatesListing />
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewModels:ConversionHistoryViewModel}">
+            <views:ConversionHistory />
+        </DataTemplate>
+
         <!--
         <local:RadioAccountTypeConverter x:Key="RadioButtonCheckedConverter" />
         <local:RadioIsServiceCheckedConverter x:Key="RadioIsServiceCheckedConverter" />

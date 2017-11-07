@@ -53,15 +53,13 @@ warning 6002: The table/view 'software_tools.sys.database_firewall_rules' does n
       <Schema Namespace="software_toolsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Conversion">
           <Key>
-            <PropertyRef Name="ConversionID" />
             <PropertyRef Name="ConversionId" />
           </Key>
-          <Property Name="ConversionID" Type="Int32" Nullable="false" />
+          <Property Name="ConversionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" />
           <Property Name="SourceCurrency" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DestinationCurrency" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Amount" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ConvertedAmount" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ConversionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DateConverted" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="database_firewall_rules">

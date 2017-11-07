@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="CurrencyConverterFrontend.Views.ConversionHistory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CurrencyConverterFrontend.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="725">
+    <StackPanel  Margin="10">
+        <WrapPanel HorizontalAlignment="Left">
+            <Button Content="&#x2190; Back" Margin="0 0 20 0" Height="25"  Background="Transparent" BorderBrush="Transparent" Command="{Binding backCmd}" />
+        </WrapPanel>
+
+        <Label Content="{Binding txtHeading}" Style="{StaticResource MainHeading}" />
+
+        <DataGrid Margin="0 10 0 0" MaxHeight="325" ItemsSource="{Binding Conversions}" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ConversionId}" Header="ID" />
+                <DataGridTextColumn Binding="{Binding SourceCurrency}" Header="Source Currency" />
+                <DataGridTextColumn Binding="{Binding DestinationCurrency}" Header="Destination Currency" />
+                <DataGridTextColumn Binding="{Binding Amount}" Header="Amount" />
+                <DataGridTextColumn Binding="{Binding ConvertedAmount}" Header="Converted Amount" />
+                <DataGridTextColumn Binding="{Binding DateConverted}" Header="Date Converted" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>

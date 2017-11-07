@@ -63,6 +63,7 @@
                 </Menu.ItemsPanel>
                 <MenuItem Header="Convert Currencies" Style="{StaticResource navItem}" Command="{Binding GoToConversionForm}"/>
                 <MenuItem Header="Currency Rates" Style="{StaticResource navItem}" Command="{Binding GoToRatesListing}"/>
+                <MenuItem Header="Conversion History" Style="{StaticResource navItem}" Command="{Binding GoToConversionHistory}"/>
             </Menu>
 
         </StackPanel>

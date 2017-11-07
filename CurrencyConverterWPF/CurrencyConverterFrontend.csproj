@@ -114,11 +114,15 @@
     <Compile Include="Validator.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ConversionFormViewModel.cs" />
+    <Compile Include="ViewModels\ConversionHistoryViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RatesListViewModel.cs" />
     <Compile Include="Views\ConversionForm.xaml.cs">
       <DependentUpon>ConversionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConversionHistory.xaml.cs">
+      <DependentUpon>ConversionHistory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
@@ -139,6 +143,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\ConversionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConversionHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

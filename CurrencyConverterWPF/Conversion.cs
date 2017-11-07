@@ -14,12 +14,11 @@ namespace CurrencyConverterFrontend
     
     public partial class Conversion
     {
-        public int ConversionID { get; set; }
+        public int ConversionId { get; set; }
         public string SourceCurrency { get; set; }
         public string DestinationCurrency { get; set; }
         public Nullable<decimal> Amount { get; set; }
         public Nullable<decimal> ConvertedAmount { get; set; }
-        public int ConversionId { get; set; }
         public Nullable<System.DateTime> DateConverted { get; set; }
     }
 }
