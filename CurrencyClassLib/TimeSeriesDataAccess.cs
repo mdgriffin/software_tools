@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CurrencyClassLib
 {
-    class TimeSeriesDataAccess
+    public class TimeSeriesDataAccess
     {
         private const String API_KEY = "7KWFxr5nhMn4NDm4jtNC";
         private const String BASE_URL = "https://www.quandl.com/api/v3/datasets/ECB/";
