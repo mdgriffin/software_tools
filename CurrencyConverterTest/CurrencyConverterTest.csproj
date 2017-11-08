@@ -52,6 +52,7 @@
     <Compile Include="CurrencyExchangerTest.cs" />
     <Compile Include="CurrencyDataAccessTest.cs" />
     <Compile Include="TimeSeriesDataAccessTest.cs" />
+    <Compile Include="TimeSeriesTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
