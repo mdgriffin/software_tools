@@ -66,9 +66,8 @@ namespace CurrencyConverterFrontend.ViewModels
 
             foreach (List<Object> timePoint in currencyTimeSeries)
             {
-                chartLabels[index] = (String)timePoint[0];
-                chartValues.Insert(index++, (double)timePoint[1]);
-                
+                chartLabels[index++] = (String)timePoint[0];
+                chartValues.Add((double)timePoint[1]);
             }
 
             SeriesCollection = new SeriesCollection
