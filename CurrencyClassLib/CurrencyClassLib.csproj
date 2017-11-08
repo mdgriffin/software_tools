@@ -46,9 +46,11 @@
     <Compile Include="CurrencyExchanger.cs" />
     <Compile Include="CurrencyDataAccess.cs" />
     <Compile Include="CurrencyModel.cs" />
+    <Compile Include="DataSetModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rates.cs" />
     <Compile Include="TimeSeriesDataAccess.cs" />
+    <Compile Include="TimeSeriesModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
