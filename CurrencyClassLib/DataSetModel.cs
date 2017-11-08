@@ -31,9 +31,4 @@ namespace CurrencyClassLib
         public string Type { get; set; }
     }
 
-    public struct TimePoint
-    {
-        public string String;
-        public double? Double;
-    }
 }
