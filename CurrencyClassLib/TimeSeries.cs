@@ -18,7 +18,7 @@ namespace CurrencyClassLib
             timeSeriesModel = JsonConvert.DeserializeObject<TimeSeriesModel>(timeSeriesJson);
         }
 
-        public static List<List<TimePoint>> GetTimeSeries (String currencyCode, DateTime startDate, DateTime endDate)
+        public static List<List<Object>> GetTimeSeries (String currencyCode, DateTime startDate, DateTime endDate)
         {
             // If the model has not been set or it's set to a different currency
             /*

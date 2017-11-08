@@ -11,7 +11,7 @@ namespace CurrencyClassLib
         public string Collapse { get; set; }
         public object ColumnIndex { get; set; }
         public string[] ColumnNames { get; set; }
-        public List<List<TimePoint>> Data { get; set; }
+        public List<List<object>> Data { get; set; }
         public string DatabaseCode { get; set; }
         public long DatabaseId { get; set; }
         public string DatasetCode { get; set; }

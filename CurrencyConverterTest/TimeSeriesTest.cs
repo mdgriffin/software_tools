@@ -11,10 +11,10 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetTimeSeriesTest()
         {
-            List<List<TimePoint>> timeSeries = TimeSeries.GetTimeSeries("USD", DateTime.ParseExact("25-04-2005", "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture), DateTime.ParseExact("25-04-2006", "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture));
+            List<List<Object>> timeSeries = TimeSeries.GetTimeSeries("USD", DateTime.ParseExact("25-04-2005", "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture), DateTime.ParseExact("25-04-2006", "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture));
 
-            int expectedNumTimePoints = 52;
-            int actualNumTimePoints = 51;// timeSeries.Length;
+            int expectedNumTimePoints = 53;
+            int actualNumTimePoints = timeSeries.Count;
 
             Assert.AreEqual(expectedNumTimePoints, actualNumTimePoints);
         }
