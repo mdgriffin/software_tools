@@ -17,6 +17,12 @@
 
         <WrapPanel>
             <ComboBox  Width="120" Height="25" Margin="25 0 0 0" ItemsSource="{StaticResource Currencies}" SelectedItem="{Binding selectedCurrency}" />
+            
+            <Label Content="Start Date" />
+            <DatePicker DisplayDateStart="{Binding dateRangeMin}" DisplayDateEnd="{Binding dateRangeMax}"  SelectedDate="{Binding dateRangeStart}" />
+
+            <Label Content="End Date" />
+            <DatePicker DisplayDateStart="{Binding dateRangeMin}" DisplayDateEnd="{Binding dateRangeMax}" SelectedDate="{Binding dateRangeEnd}" />
         </WrapPanel>
             
         <Grid>
