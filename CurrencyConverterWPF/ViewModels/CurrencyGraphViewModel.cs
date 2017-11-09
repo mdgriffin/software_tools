@@ -25,11 +25,6 @@ namespace CurrencyConverterFrontend.ViewModels
             // The minimum and maximum dates that can be selected
             dateRangeMin = "1/01/2000";
             dateRangeMax = DateTime.Today.ToString("M/dd/yyyy");
-
-            // The default date range from 1 year ago to today
-            dateRangeStart = DateTime.Today.AddYears(-1);
-            dateRangeEnd = DateTime.Today;
-
         }
 
         public String txtHeading { get; set; }
@@ -56,8 +51,51 @@ namespace CurrencyConverterFrontend.ViewModels
         public String[] chartLabels { get; set; }
         public String dateRangeMin { get; set; }
         public String dateRangeMax { get; set; }
-        public DateTime dateRangeStart { get; set; }
-        public DateTime dateRangeEnd { get; set; }
+
+        // nullable type to ensure that if has not been set it will null
+        private DateTime? _dateRangeStart;
+        public DateTime dateRangeStart {
+            get
+            {
+                // if not defined set with default value
+                if (_dateRangeStart == null)
+                {
+                    _dateRangeStart = DateTime.Today.AddYears(-1);
+                }
+                return _dateRangeStart.Value;
+            }
+            set
+            {
+                if (value != _dateRangeStart)
+                {
+                    _dateRangeStart = value;
+                }
+                
+            }
+        }
+
+        // nullable type to ensure that if has not been set it will null
+        private DateTime? _dateRangeEnd;
+        public DateTime dateRangeEnd
+        {
+            get
+            {
+                // if not defined set with default value
+                if (_dateRangeEnd == null)
+                {
+                    _dateRangeEnd = DateTime.Today;
+                }
+                return _dateRangeEnd.Value;
+            }
+            set
+            {
+                if (value != _dateRangeEnd)
+                {
+                    _dateRangeEnd = value;
+                }
+
+            }
+        }
 
 
         public void generateGraph ()
