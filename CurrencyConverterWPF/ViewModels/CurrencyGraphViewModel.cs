@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using CurrencyClassLib;
+using System.Collections;
 
 namespace CurrencyConverterFrontend.ViewModels
 {
@@ -48,7 +49,7 @@ namespace CurrencyConverterFrontend.ViewModels
         public string[] Labels { get; set; }
         public Func<double, string> YFormatter { get; set; }
         public ChartValues<double> chartValues { get; set; }
-        public String[] chartLabels { get; set; }
+        public List<String> chartLabels { get; set; }
         public String dateRangeMin { get; set; }
         public String dateRangeMax { get; set; }
 
@@ -66,9 +67,11 @@ namespace CurrencyConverterFrontend.ViewModels
             }
             set
             {
-                if (value != _dateRangeStart)
+                // ensuring that the end of the date range is after the start
+                if (value != _dateRangeStart && _dateRangeEnd > _dateRangeStart)
                 {
                     _dateRangeStart = value;
+                    generateGraph();
                 }
                 
             }
@@ -89,9 +92,11 @@ namespace CurrencyConverterFrontend.ViewModels
             }
             set
             {
-                if (value != _dateRangeEnd)
+                // ensuring that the end of the date range is after the start
+                if (value != _dateRangeEnd && _dateRangeEnd > _dateRangeStart)
                 {
                     _dateRangeEnd = value;
+                    generateGraph();
                 }
 
             }
@@ -104,17 +109,16 @@ namespace CurrencyConverterFrontend.ViewModels
 
             if (chartLabels == null || chartValues == null)
             {
-                chartLabels = new String[currencyTimeSeries.Count];
+                chartLabels = new List<String>();
                 chartValues = new ChartValues<double>();
             }
             
-            int index = 0;
-
             chartValues.Clear();
+            chartLabels.Clear();
 
             foreach (List<Object> timePoint in currencyTimeSeries)
             {
-                chartLabels[index++] = (String)timePoint[0];
+                chartLabels.Add((String)timePoint[0]);
                 chartValues.Add((double)timePoint[1]);
             }
 
@@ -127,7 +131,7 @@ namespace CurrencyConverterFrontend.ViewModels
                 },
             };
 
-            Labels = chartLabels;
+            Labels = chartLabels.ToArray();
 
 
             YFormatter = value => value.ToString("C");
