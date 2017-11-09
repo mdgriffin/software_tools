@@ -31,7 +31,7 @@
         </Style>
 
         <Style x:Key="navItem" TargetType="MenuItem">
-            <Setter Property="Background" Value="White" />
+            <Setter Property="Background" Value="#f4f4f4" />
             <Setter Property="BorderThickness" Value="5 0 0 0" />
             <Setter Property="BorderBrush" Value="White" />
             <Setter Property="Padding" Value="10 6" />
@@ -46,9 +46,9 @@
 
     </Window.Resources>
 
-    <DockPanel Background="#F4F7F9">
+    <DockPanel Background="#ffffff">
 
-        <StackPanel DockPanel.Dock="Left" Background="White" Width="275">
+        <StackPanel DockPanel.Dock="Left" Background="#f4f4f4" Width="275">
 
             <StackPanel Background="#f44242">
                 <TextBlock Text="Currency Conveter" Foreground="White" Margin="10 10 10 0" FontSize="28" FontFamily="Impact" />
