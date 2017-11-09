@@ -60,7 +60,8 @@ namespace CurrencyConverterFrontend.ViewModels
                         SourceCurrency = fromCurrencyCode,
                         DestinationCurrency = toCurrencyCode,
                         Amount = Decimal.Parse(currency.from),
-                        ConvertedAmount = Decimal.Parse(currency.from)
+                        ConvertedAmount = Decimal.Parse(currency.from),
+                        DateConverted = DateTime.Now
                     };
 
                     ctx.Conversions.Add(conv);
