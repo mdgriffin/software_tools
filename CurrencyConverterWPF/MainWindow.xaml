@@ -69,7 +69,10 @@
 
         </StackPanel>
 
-        <ContentControl Content="{Binding ViewModel}" />
+        <Grid>
+            <ContentControl Content="{Binding ViewModel}" />
+        </Grid>
+
     </DockPanel>
 
 </Window>
