@@ -47,14 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CurrencyExchanger.cs" />
-    <Compile Include="CurrencyDataAccess.cs" />
+    <Compile Include="FixerAPIAccess.cs" />
     <Compile Include="CurrencyModel.cs" />
     <Compile Include="DataSetModel.cs" />
+    <Compile Include="ICurrencyDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rates.cs" />
     <Compile Include="TimeSeries.cs" />
     <Compile Include="TimeSeriesDataAccess.cs" />
     <Compile Include="TimeSeriesModel.cs" />
+    <Compile Include="Envelope.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

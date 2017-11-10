@@ -11,9 +11,12 @@ namespace CurrencyClassLib
     {
 
         private static CurrencyModel currencyModel;
+        private ICurrencyDataAccess CurrencyDataProvider;
 
-        public CurrencyExchanger()
+        public CurrencyExchanger(ICurrencyDataAccess DataProvider)
         {
+            CurrencyDataProvider = DataProvider;
+
             if (currencyModel == null)
             {
                 // Set the Currency Model with the default currency
@@ -23,8 +26,7 @@ namespace CurrencyClassLib
 
         private void SetCurrencyModel(String baseCurrencyCode)
         {
-            String currencyJson = CurrencyDataAccess.GetJSON(baseCurrencyCode);
-            currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(currencyJson);
+            currencyModel = CurrencyDataProvider.GetData(baseCurrencyCode);
         }
 
         public Rates GetExchangeRatesList()

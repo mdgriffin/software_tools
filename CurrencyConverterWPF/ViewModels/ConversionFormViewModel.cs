@@ -38,7 +38,7 @@ namespace CurrencyConverterFrontend.ViewModels
 
         public void OnConvertClick ()
         {
-            CurrencyExchanger cx = new CurrencyExchanger();
+            CurrencyExchanger cx = new CurrencyExchanger(new FixerAPIAccess());
 
             if (!currency.HasErrors)
             {
