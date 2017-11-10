@@ -38,16 +38,24 @@ namespace CurrencyClassLib
             currencyModel.@base = baseCurrencyCode;
             currencyModel.date = envelope.Cube.Cube1.time.ToString("yyyy-MM-dd");
             currencyModel.rates = new Rates();
+            double conversionFactor = 1;
 
             // Set the base currency to 1
             currencyModel.rates.GetType().GetProperty(baseCurrencyCode).SetValue(currencyModel.rates, (double)1, null);
 
             var cubeList = envelope.Cube.Cube1.Cube;
 
+            if (!baseCurrencyCode.Equals("EUR"))
+            {
+                // USD to BGN     = (EURBGN / USDEUR)
+                conversionFactor = (double)cubeList.Where(item => item.currency.Equals(baseCurrencyCode)).First().rate;
+
+            }
+
             // foreach cube item in the list
             foreach (var cubeItem in cubeList)
             {
-                currencyModel.rates.GetType().GetProperty(cubeItem.currency).SetValue(currencyModel.rates, (double)cubeItem.rate, null);
+                currencyModel.rates.GetType().GetProperty(cubeItem.currency).SetValue(currencyModel.rates, (double)cubeItem.rate / conversionFactor, null);
             }
 
             return currencyModel;
