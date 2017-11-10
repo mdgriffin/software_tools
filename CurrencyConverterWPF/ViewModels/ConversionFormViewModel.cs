@@ -38,15 +38,13 @@ namespace CurrencyConverterFrontend.ViewModels
 
         public void OnConvertClick ()
         {
-            //currency.from
             CurrencyExchanger cx = new CurrencyExchanger();
-
-            //cx.Convert(currency.from, currency.fromCode, currency.toCode);
 
             if (!currency.HasErrors)
             {
                 String fromCurrencyCode = currency.fromCode.Substring(currency.fromCode.Length - 4, 3);
                 String toCurrencyCode = currency.toCode.Substring(currency.toCode.Length - 4, 3);
+
 
                 currency.to = cx.Convert(Double.Parse(currency.from), fromCurrencyCode, toCurrencyCode).ToString();
 

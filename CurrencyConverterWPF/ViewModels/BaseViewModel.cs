@@ -32,6 +32,45 @@ namespace CurrencyConverterFrontend.ViewModels
             }
         }
 
+        private string _SpinnerVisibility;
+        public string SpinnerVisibility
+        {
+            get
+            {
+                // if not initialized set to default value
+                if (string.IsNullOrEmpty(_SpinnerVisibility))
+                {
+                    SpinnerVisibility = "Hidden";
+                }
+                return _SpinnerVisibility;
+            }
+            set
+            {
+                if (value != _SpinnerVisibility)
+                {
+                    _SpinnerVisibility = value;
+                    NotifyPropertyChanged("SpinnerVisibility");
+                }
+            }
+        }
+
+        private bool _IsLoading;
+        public bool IsLoading
+        {
+            get
+            {
+                return _IsLoading;
+            }
+            set
+            {
+                if (value != _IsLoading)
+                {
+                    _IsLoading = value;
+                    SpinnerVisibility = (value ? "Visible" : "Hidden");
+                }
+            }
+        }
+
         // Command that is called when the back button is pressed
         public ICommand backCmd
         {
