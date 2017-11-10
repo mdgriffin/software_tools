@@ -8,8 +8,46 @@ namespace CurrencyConverterFrontend.ViewModels
         public MainViewModel()
         {
             this.parent = this;
-            // The first view model is the home view model
+            // The first view model is the conversion view model
             navigateTo(new ConversionFormViewModel(this));
+        }
+
+        private string _SpinnerVisibility;
+        public string SpinnerVisibilty
+        {
+            get
+            {
+                // if not initialized set to default value
+                if (string.IsNullOrEmpty(_SpinnerVisibility))
+                {
+                    _SpinnerVisibility = "Hidden";
+                }
+                return _SpinnerVisibility;
+            }
+            set
+            {
+                if (value != _SpinnerVisibility)
+                {
+                    _SpinnerVisibility = value;
+                    NotifyPropertyChanged("SpinnerVisibility");
+                }
+            }
+        }
+
+        private bool _IsLoading;
+        public bool IsLoading {
+            get
+            {
+                return _IsLoading;
+            }
+            set
+            {
+                if (value != _IsLoading)
+                {
+                    _IsLoading = value;
+                    SpinnerVisibilty = (value ? "Visible" : "Hidden");
+                }
+            }
         }
 
         public ICommand GoToConversionForm
