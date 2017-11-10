@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CurrencyExchanger.cs" />
+    <Compile Include="ECBDataAccess.cs" />
     <Compile Include="FixerAPIAccess.cs" />
     <Compile Include="CurrencyModel.cs" />
     <Compile Include="DataSetModel.cs" />

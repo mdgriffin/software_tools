@@ -11,7 +11,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetExchangeRatesListTest()
         {
-            CurrencyExchanger cc = new CurrencyExchanger();
+            CurrencyExchanger cc = new CurrencyExchanger(new ECBDataAccess());
 
             Rates rates = cc.GetExchangeRatesList("USD");
 
@@ -21,7 +21,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void ExhangeRatesChangeOnBaseCurrencyChange()
         {
-            CurrencyExchanger cc = new CurrencyExchanger();
+            CurrencyExchanger cc = new CurrencyExchanger(new FixerAPIAccess());
 
             Rates initialRates = cc.GetExchangeRatesList("USD");
             Rates changedRates = cc.GetExchangeRatesList("EUR");
@@ -34,7 +34,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetExchangeRateTest()
         {
-            CurrencyExchanger cc = new CurrencyExchanger();
+            CurrencyExchanger cc = new CurrencyExchanger(new FixerAPIAccess());
             Double actualRate = cc.GetExchangeRate("EUR", "JPY");
             double expectedRate = 0.5;
 
@@ -44,7 +44,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void ConvertTest()
         {
-            CurrencyExchanger cc = new CurrencyExchanger();
+            CurrencyExchanger cc = new CurrencyExchanger(new FixerAPIAccess());
 
             double valueToConvert = 125;
             double expectedValue = valueToConvert * 0.5;
