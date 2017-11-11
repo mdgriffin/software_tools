@@ -20,11 +20,5 @@ namespace CurrencyClassLib
             return JsonConvert.DeserializeObject<CurrencyModel>(json);
         }
 
-        public CurrencyModel GetData(String baseCurrencyCode)
-        {
-            var json = new WebClient().DownloadString(baseUrl + "?base=" + baseCurrencyCode);
-            return JsonConvert.DeserializeObject<CurrencyModel>(json);
-        }
-
     }
 }

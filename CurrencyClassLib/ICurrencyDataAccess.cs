@@ -10,7 +10,5 @@ namespace CurrencyClassLib
     {
 
         CurrencyModel GetData();
-
-        CurrencyModel GetData(String baseCurrencyCode);
     }
 }
