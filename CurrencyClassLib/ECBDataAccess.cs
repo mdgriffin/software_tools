@@ -31,7 +31,7 @@ namespace CurrencyClassLib
             return EnvelopeToCurrencyModel(ev, baseCurrencyCode);
         }
 
-        public CurrencyModel EnvelopeToCurrencyModel (Envelope envelope, String baseCurrencyCode)
+        private CurrencyModel EnvelopeToCurrencyModel (Envelope envelope, String baseCurrencyCode)
         {
             // Initialize currency model
             CurrencyModel currencyModel = new CurrencyModel();

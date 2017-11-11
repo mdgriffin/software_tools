@@ -20,13 +20,8 @@ namespace CurrencyClassLib
             if (currencyModel == null)
             {
                 // Set the Currency Model with the default currency
-                SetCurrencyModel("USD");
+                currencyModel = CurrencyDataProvider.GetData();
             }
-        }
-
-        private void SetCurrencyModel(String baseCurrencyCode)
-        {
-            currencyModel = CurrencyDataProvider.GetData(baseCurrencyCode);
         }
 
         public Rates GetExchangeRatesList()
@@ -37,23 +32,35 @@ namespace CurrencyClassLib
 
         public Rates GetExchangeRatesList(String baseCurrencyCode)
         {
+
+            Rates rates;
+
             if (!currencyModel.@base.Equals(baseCurrencyCode))
             {
-                SetCurrencyModel(baseCurrencyCode);
+                // create a new rates list
+                rates = new Rates();
+                double conversionFactor = GetExchangeRate("EUR", baseCurrencyCode);
+
+                foreach(var rate in currencyModel.rates.GetType().GetProperties())
+                {
+                    // foreach rate, set the new rate based on the base currency
+                    rates.GetType().GetProperty(rate.Name).SetValue(rates, (double)rate.GetValue(currencyModel.rates, null) / conversionFactor);
+                }
+            } else
+            {
+                // If the currency is the same as the default base
+                rates = currencyModel.rates;
             }
 
-            return currencyModel.rates;
+            return rates;
         }
 
         public double GetExchangeRate(String baseCurrencyCode, String toCurrencyCode)
         {
-            if (!currencyModel.@base.Equals(baseCurrencyCode))
-            {
-                SetCurrencyModel(baseCurrencyCode);
-            }
-
             // Using reflection to get the value of property from the property name as a String
-            return (double)currencyModel.rates.GetType().GetProperty(toCurrencyCode).GetValue(currencyModel.rates, null);
+            double conversionFactor = (double)currencyModel.rates.GetType().GetProperty(baseCurrencyCode).GetValue(currencyModel.rates, null);
+
+            return (double)currencyModel.rates.GetType().GetProperty(toCurrencyCode).GetValue(currencyModel.rates, null) / conversionFactor;
 
         }
 
