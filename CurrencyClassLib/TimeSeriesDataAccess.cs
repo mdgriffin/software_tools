@@ -15,7 +15,7 @@ namespace CurrencyClassLib
         public static String GetJSON(String currencyCode, DateTime startDate, DateTime endDate)
         {
             String fullUrl = String.Format(
-                "{0}EUR{1}.json?start_date={2}&end_date={3}&collapse=weekly&api_key={4}",
+                "{0}EUR{1}.json?order=asc&start_date={2}&end_date={3}&collapse=weekly&api_key={4}",
                 BASE_URL,
                 currencyCode,
                 startDate.ToString("dd-MM-yyyy"),

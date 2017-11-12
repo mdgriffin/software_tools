@@ -20,14 +20,6 @@ namespace CurrencyClassLib
 
         public static List<List<Object>> GetTimeSeries (String currencyCode, DateTime startDate, DateTime endDate)
         {
-            // If the model has not been set or it's set to a different currency
-            /*
-            if (timeSeriesModel == null || timeSeriesModel.Dataset.DatabaseCode.Substring(3) != currencyCode)
-            {
-                SetTimeSeriesModel(currencyCode, startDate, endDate);
-            }
-            */
-
             String timeSeriesJson = TimeSeriesDataAccess.GetJSON(currencyCode, startDate, endDate);
             TimeSeriesModel timeSeriesModel = JsonConvert.DeserializeObject<TimeSeriesModel>(timeSeriesJson);
 
