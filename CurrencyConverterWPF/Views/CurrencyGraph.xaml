@@ -27,7 +27,7 @@
             
         <Grid>
             <Grid>
-                <lvc:CartesianChart Height="400" Series="{Binding SeriesCollection}" LegendLocation="Right" >
+                <lvc:CartesianChart Height="400" Series="{Binding SeriesCollection}">
                     <lvc:CartesianChart.AxisY>
                         <lvc:Axis LabelFormatter="{Binding YFormatter}"></lvc:Axis>
                     </lvc:CartesianChart.AxisY>

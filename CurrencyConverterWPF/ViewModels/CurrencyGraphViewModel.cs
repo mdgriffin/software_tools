@@ -20,9 +20,6 @@ namespace CurrencyConverterFrontend.ViewModels
             // Set the default base currency code
             selectedCurrency = "US Dollar (USD)";
 
-            // Set the default heading
-            txtHeading = "Dollar Rates";
-
             // The minimum and maximum dates that can be selected
             dateRangeMin = "1/01/2000";
             dateRangeMax = DateTime.Today.ToString("M/dd/yyyy");
@@ -41,6 +38,10 @@ namespace CurrencyConverterFrontend.ViewModels
                 {
                     _selectedCurrency = value;
                     NotifyPropertyChanged("selectedCurrency");
+
+                    txtHeading = selectedCurrency.Substring(0, selectedCurrency.Length - 5);
+                    NotifyPropertyChanged("txtHeading");
+
                     generateGraph();
                 }
             }
