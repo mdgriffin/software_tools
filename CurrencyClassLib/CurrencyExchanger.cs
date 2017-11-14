@@ -44,7 +44,7 @@ namespace CurrencyClassLib
                 foreach(var rate in currencyModel.rates.GetType().GetProperties())
                 {
                     // foreach rate, set the new rate based on the base currency
-                    rates.GetType().GetProperty(rate.Name).SetValue(rates, (double)rate.GetValue(currencyModel.rates, null) / conversionFactor);
+                    rates.GetType().GetProperty(rate.Name).SetValue(rates, Math.Round((double)rate.GetValue(currencyModel.rates, null) / conversionFactor, 4));
                 }
             } else
             {
