@@ -15,7 +15,7 @@ namespace CurrencyConverterFrontend.ViewModels
         {
             this.parent = parent;
 
-            cx = new CurrencyExchanger(new FixerAPIAccess());
+            cx = new CurrencyExchanger(new ECBDataAccess());
 
             baseCurrency = "Euro (EUR)";
         }

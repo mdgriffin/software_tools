@@ -12,12 +12,17 @@ namespace CurrencyClassLib
     {
 
         private static String baseUrl = "http://api.fixer.io/latest";
+        private static String baseCurrencyCode = "EUR";
 
         public CurrencyModel GetData()
         {
             var json = new WebClient().DownloadString(baseUrl);
 
-            return JsonConvert.DeserializeObject<CurrencyModel>(json);
+            CurrencyModel currencyModel = JsonConvert.DeserializeObject<CurrencyModel>(json);
+
+            currencyModel.rates.GetType().GetProperty(baseCurrencyCode).SetValue(currencyModel.rates, (double)1, null);
+
+            return currencyModel;
         }
 
     }
