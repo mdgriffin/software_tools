@@ -8,7 +8,6 @@ namespace CurrencyClassLib
 {
     public interface ICurrencyDataAccess
     {
-
         CurrencyModel GetData();
     }
 }

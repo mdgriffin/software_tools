@@ -11,7 +11,7 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetExchangeRatesListTest()
         {
-            CurrencyExchanger cc = new CurrencyExchanger(new ECBDataAccess());
+            CurrencyExchanger cc = new CurrencyExchanger(new MockDataAccess());
 
             Rates rates = cc.GetExchangeRatesList("USD");
 
@@ -21,10 +21,10 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void ExhangeRatesChangeOnBaseCurrencyChange()
         {
-            CurrencyExchanger cc = new CurrencyExchanger(new FixerAPIAccess());
+            CurrencyExchanger cc = new CurrencyExchanger(new MockDataAccess());
 
-            Rates initialRates = cc.GetExchangeRatesList("USD");
-            Rates changedRates = cc.GetExchangeRatesList("EUR");
+            Rates initialRates = cc.GetExchangeRatesList("EUR");
+            Rates changedRates = cc.GetExchangeRatesList("USD");
 
             Assert.AreNotEqual(initialRates.USD, changedRates.USD);
         }
@@ -34,23 +34,23 @@ namespace CurrencyConverterTest
         [TestMethod]
         public void GetExchangeRateTest()
         {
-            CurrencyExchanger cc = new CurrencyExchanger(new FixerAPIAccess());
+            CurrencyExchanger cc = new CurrencyExchanger(new MockDataAccess());
             Double actualRate = cc.GetExchangeRate("EUR", "JPY");
-            double expectedRate = 0.5;
+            double expectedRate = 1.5;
 
-            Assert.AreEqual(expectedRate, actualRate);
+            Assert.AreEqual(expectedRate, actualRate, 0.01);
         }
 
         [TestMethod]
         public void ConvertTest()
         {
-            CurrencyExchanger cc = new CurrencyExchanger(new FixerAPIAccess());
+            CurrencyExchanger cc = new CurrencyExchanger(new MockDataAccess());
 
             double valueToConvert = 125;
-            double expectedValue = valueToConvert * 0.5;
-            double actualValue = cc.Convert(valueToConvert, "USD", "EUR");
+            double expectedValue = valueToConvert * 1.5;
+            double actualValue = cc.Convert(valueToConvert, "EUR", "USD");
 
-            Assert.AreEqual(expectedValue, actualValue);
+            Assert.AreEqual(expectedValue, actualValue, 0.01);
         }
     }
 }
